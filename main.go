@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/base64"
 	"log"
 	"time"
 
@@ -19,8 +20,17 @@ func main() {
 	}))
 
 	// route
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
+	app.Get("/image.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		s := "base64ImagePlaceholder"
+		data, err := base64.StdEncoding.DecodeString(s)
+		if err != nil {
+			log.Fatal("error:", err)
+		}
+
+		_, err = c.Write(data)
+		return err
 	})
 
 	// entrypoint
