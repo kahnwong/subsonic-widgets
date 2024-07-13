@@ -36,8 +36,6 @@ func main() {
 	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
-		//s := "base64ImagePlaceholder"
-
 		nowPlaying := getNowPlaying()
 		svg := generateNowPlayingWidgetBase64(nowPlaying)
 
