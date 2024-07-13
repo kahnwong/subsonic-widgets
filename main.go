@@ -44,6 +44,10 @@ func main() {
 	authParams, _ = query.Values(authEnv)
 
 	// routes
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Welcome to subsonic-widgets api")
+	})
+
 	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
