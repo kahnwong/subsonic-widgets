@@ -4,13 +4,18 @@ import (
 	"encoding/base64"
 	"fmt"
 	"log"
+	"net/url"
 	"os"
 	"time"
+
+	"github.com/google/go-querystring/query"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 	_ "github.com/joho/godotenv/autoload"
 )
+
+var authParams url.Values
 
 func main() {
 	app := fiber.New()
@@ -22,8 +27,10 @@ func main() {
 	}))
 
 	// test
-	p := getNowPlaying(authEnv)
-	fmt.Println(p.SubsonicResponse.NowPlaying.Entry[0].Album)
+	authParams, _ = query.Values(authEnv)
+
+	nowPlaying := getNowPlaying(authParams)
+	generateNowPlaying(nowPlaying)
 
 	// routes
 	app.Get("/image.svg", func(c *fiber.Ctx) error {

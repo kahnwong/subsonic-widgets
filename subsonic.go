@@ -5,12 +5,11 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"os"
 	"time"
 
 	"log"
-
-	"github.com/google/go-querystring/query"
 )
 
 // auth
@@ -73,13 +72,12 @@ type NowPlaying struct {
 }
 
 // fetchers
-func getNowPlaying(authEnv subsonicAuth) NowPlaying {
+func getNowPlaying(authParams url.Values) NowPlaying {
 	log.Println("Fetching now playing")
 
 	// fetch response
-	authParams, _ := query.Values(authEnv)
-	url := fmt.Sprintf("%s/rest/getNowPlaying?%s", os.Getenv("SUBSONIC_API_ENDPOINT"), authParams.Encode())
-	resp, err := http.Get(url)
+	requestUrl := fmt.Sprintf("%s/rest/getNowPlaying?%s", os.Getenv("SUBSONIC_API_ENDPOINT"), authParams.Encode())
+	resp, err := http.Get(requestUrl)
 	if err != nil {
 		log.Println("No response from request")
 	}
@@ -90,7 +88,6 @@ func getNowPlaying(authEnv subsonicAuth) NowPlaying {
 	if err != nil {
 		log.Println("Error reading response body")
 	}
-	fmt.Println(body)
 
 	var response NowPlaying
 	if err := json.Unmarshal(body, &response); err != nil {
