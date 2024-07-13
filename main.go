@@ -20,6 +20,17 @@ var (
 	authParams          url.Values
 )
 
+func returnSVGResponse(c *fiber.Ctx, svg string) error {
+	data, err := base64.StdEncoding.DecodeString(svg)
+	if err != nil {
+		log.Fatal("error:", err)
+	}
+
+	_, err = c.Write(data)
+
+	return err
+}
+
 func main() {
 	app := fiber.New()
 
@@ -39,13 +50,7 @@ func main() {
 		nowPlaying := getNowPlaying()
 		svg := generateNowPlayingWidgetBase64(nowPlaying)
 
-		data, err := base64.StdEncoding.DecodeString(svg)
-		if err != nil {
-			log.Fatal("error:", err)
-		}
-
-		_, err = c.Write(data)
-		return err
+		return returnSVGResponse(c, svg)
 	})
 
 	// entrypoint
