@@ -2,8 +2,12 @@ package main
 
 import (
 	"encoding/base64"
+	"fmt"
 	"log"
+	"os"
 	"time"
+
+	"github.com/joho/godotenv"
 
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 
@@ -12,6 +16,14 @@ import (
 
 func main() {
 	app := fiber.New()
+
+	// Init env var
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println("Loading env from env var instead...")
+	}
+
+	mode := os.Getenv("MODE")
 
 	// 20 requests per 1 minute max
 	app.Use(limiter.New(limiter.Config{
@@ -34,5 +46,13 @@ func main() {
 	})
 
 	// entrypoint
-	log.Fatal(app.Listen(":3000"))
+	listenAddress := ""
+	if mode == "production" {
+		listenAddress = ":3000"
+	} else if mode == "development" {
+		listenAddress = "localhost:3000"
+	} else {
+		fmt.Println("Listen address is not set")
+	}
+	log.Fatal(app.Listen(listenAddress))
 }
