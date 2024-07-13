@@ -12,10 +12,10 @@ import (
 func main() {
 	app := fiber.New()
 
-	// 3 requests per 10 seconds max
+	// 20 requests per 1 minute max
 	app.Use(limiter.New(limiter.Config{
-		Expiration: 10 * time.Second,
-		Max:        3,
+		Expiration: 1 * time.Minute,
+		Max:        20,
 	}))
 
 	// route
