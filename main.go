@@ -8,6 +8,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/gofiber/fiber/v2/middleware/cache"
+
 	"github.com/google/go-querystring/query"
 
 	"github.com/gofiber/fiber/v2"
@@ -38,6 +40,15 @@ func main() {
 	app.Use(limiter.New(limiter.Config{
 		Expiration: 1 * time.Minute,
 		Max:        20,
+	}))
+
+	// set no-cache
+	app.Use(cache.New(cache.Config{
+		Next: func(c *fiber.Ctx) bool {
+			return c.Query("noCache") == "true"
+		},
+		Expiration:   1 * time.Second,
+		CacheControl: true,
 	}))
 
 	// init
