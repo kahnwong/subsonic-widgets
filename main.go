@@ -62,6 +62,42 @@ func main() {
 		return returnSVGResponse(c, svg)
 	})
 
+	app.Get("/random-album-2.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		randomAlbum := getRandomAlbum()
+		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+
+		return returnSVGResponse(c, svg)
+	})
+
+	app.Get("/random-album-3.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		randomAlbum := getRandomAlbum()
+		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+
+		return returnSVGResponse(c, svg)
+	})
+
+	app.Get("/random-album-4.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		randomAlbum := getRandomAlbum()
+		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+
+		return returnSVGResponse(c, svg)
+	})
+
+	app.Get("/random-album-5.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		randomAlbum := getRandomAlbum()
+		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+
+		return returnSVGResponse(c, svg)
+	})
+
 	// entrypoint
 	mode := os.Getenv("MODE")
 	listenAddress := ""
