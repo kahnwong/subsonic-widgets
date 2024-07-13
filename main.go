@@ -7,23 +7,13 @@ import (
 	"os"
 	"time"
 
-	"github.com/joho/godotenv"
-
-	"github.com/gofiber/fiber/v2/middleware/limiter"
-
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/limiter"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
 	app := fiber.New()
-
-	// Init env var
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println("Loading env from env var instead...")
-	}
-
-	mode := os.Getenv("MODE")
 
 	// 20 requests per 1 minute max
 	app.Use(limiter.New(limiter.Config{
@@ -31,7 +21,11 @@ func main() {
 		Max:        20,
 	}))
 
-	// route
+	// test
+	p := getNowPlaying(authEnv)
+	fmt.Println(p.SubsonicResponse.NowPlaying.Entry[0].Album)
+
+	// routes
 	app.Get("/image.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
@@ -46,6 +40,7 @@ func main() {
 	})
 
 	// entrypoint
+	mode := os.Getenv("MODE")
 	listenAddress := ""
 	if mode == "production" {
 		listenAddress = ":3000"
