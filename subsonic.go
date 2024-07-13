@@ -1,13 +1,15 @@
 package main
 
 import (
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
-	"net/url"
 	"os"
 	"time"
+
+	"github.com/google/go-querystring/query"
 
 	"log"
 )
@@ -71,12 +73,17 @@ type NowPlaying struct {
 	} `json:"subsonic-response"`
 }
 
+type CoverEnv struct {
+	ID   string `url:"id"`
+	Size int64  `url:"size"`
+}
+
 // fetchers
-func getNowPlaying(authParams url.Values) NowPlaying {
+func getNowPlaying() NowPlaying {
 	log.Println("Fetching now playing")
 
 	// fetch response
-	requestUrl := fmt.Sprintf("%s/rest/getNowPlaying?%s", os.Getenv("SUBSONIC_API_ENDPOINT"), authParams.Encode())
+	requestUrl := fmt.Sprintf("%s/rest/getNowPlaying?%s", subsonicApiEndpoint, authParams.Encode())
 	resp, err := http.Get(requestUrl)
 	if err != nil {
 		log.Println("No response from request")
@@ -95,4 +102,28 @@ func getNowPlaying(authParams url.Values) NowPlaying {
 	}
 
 	return response
+}
+
+func getCoverBase64(coverID string) string {
+	coverEnv := CoverEnv{
+		ID:   coverID,
+		Size: 48,
+	}
+	coverParams, _ := query.Values(coverEnv)
+
+	// fetch cover
+	requestUrl := fmt.Sprintf("%s/rest/getCoverArt?%s&%s", subsonicApiEndpoint, authParams.Encode(), coverParams.Encode())
+	resp, err := http.Get(requestUrl)
+	if err != nil {
+		log.Println("No response from request")
+	}
+	defer resp.Body.Close()
+
+	// convert to base64
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Println("Error reading response body")
+	}
+
+	return base64.StdEncoding.EncodeToString(body)
 }

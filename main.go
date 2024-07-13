@@ -15,7 +15,10 @@ import (
 	_ "github.com/joho/godotenv/autoload"
 )
 
-var authParams url.Values
+var (
+	subsonicApiEndpoint = os.Getenv("SUBSONIC_API_ENDPOINT")
+	authParams          url.Values
+)
 
 func main() {
 	app := fiber.New()
@@ -29,8 +32,8 @@ func main() {
 	// test
 	authParams, _ = query.Values(authEnv)
 
-	nowPlaying := getNowPlaying(authParams)
-	generateNowPlaying(nowPlaying)
+	nowPlaying := getNowPlaying()
+	generateNowPlayingWidget(nowPlaying)
 
 	// routes
 	app.Get("/image.svg", func(c *fiber.Ctx) error {
