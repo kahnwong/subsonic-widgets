@@ -1,19 +1,46 @@
 package main
 
 import (
+	"bytes"
+	"encoding/base64"
 	"fmt"
+	"log"
 	"strings"
+	"text/template"
 )
 
-func generateNowPlayingWidget(nowPlaying NowPlaying) string {
+// structs
+type NowPlayingInfo struct {
+	Title       string
+	Artist      string
+	CoverBase64 string
+}
+
+// generators
+func generateNowPlayingWidgetBase64(nowPlaying NowPlaying) string {
 	track := nowPlaying.SubsonicResponse.NowPlaying.Entry
 	if len(track) == 1 {
-		title := strings.Replace(track[0].Title, "&", "&amp;", -1)
-		album := strings.Replace(track[0].Album, "&", "&amp;", -1)
-		artist := strings.Replace(track[0].Artist, "&", "&amp;", -1)
-		coverBase64 := getCoverBase64(track[0].CoverArt)
+		nowPlayingInfo := NowPlayingInfo{
+			Title:       strings.Replace(track[0].Title, "&", "&amp;", -1),
+			Artist:      strings.Replace(track[0].Artist, "&", "&amp;", -1),
+			CoverBase64: getCoverBase64(track[0].CoverArt),
+		}
 
-		fmt.Println(title, album, artist, coverBase64)
+		// init template
+		tmpl, err := template.ParseFiles("templates/now-playing.svg")
+		if err != nil {
+			log.Println("Template file doesn't exist")
+		}
+
+		// render template
+		var tpl bytes.Buffer
+		err = tmpl.Execute(&tpl, nowPlayingInfo)
+		if err != nil {
+			log.Println("Error rendering now playing")
+		}
+		fmt.Println(tpl.String())
+
+		return base64.StdEncoding.EncodeToString(tpl.Bytes())
 	}
 
 	return ""

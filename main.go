@@ -29,18 +29,19 @@ func main() {
 		Max:        20,
 	}))
 
-	// test
+	// init
 	authParams, _ = query.Values(authEnv)
 
-	nowPlaying := getNowPlaying()
-	generateNowPlayingWidget(nowPlaying)
-
 	// routes
-	app.Get("/image.svg", func(c *fiber.Ctx) error {
+	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
-		s := "base64ImagePlaceholder"
-		data, err := base64.StdEncoding.DecodeString(s)
+		//s := "base64ImagePlaceholder"
+
+		nowPlaying := getNowPlaying()
+		svg := generateNowPlayingWidgetBase64(nowPlaying)
+
+		data, err := base64.StdEncoding.DecodeString(svg)
 		if err != nil {
 			log.Fatal("error:", err)
 		}
