@@ -11,10 +11,11 @@ RUN go build -o /subsonic-widgets
 
 FROM alpine:latest AS build-release-stage
 
-WORKDIR /
+WORKDIR /opt
 
-COPY --from=build-stage /subsonic-widgets /subsonic-widgets
+COPY templates templates
+COPY --from=build-stage /subsonic-widgets .
 
-RUN chmod +x /subsonic-widgets
+RUN chmod +x subsonic-widgets
 
-ENTRYPOINT ["/subsonic-widgets"]
+ENTRYPOINT ["./subsonic-widgets"]
