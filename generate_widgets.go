@@ -16,13 +16,18 @@ type NowPlayingInfo struct {
 	CoverBase64 string
 }
 
+// utils
+func sanitizeString(s string) string {
+	return strings.Replace(s, "&", "&amp;", -1)
+}
+
 // generators
 func generateNowPlayingWidgetBase64(nowPlaying NowPlaying) string {
 	track := nowPlaying.SubsonicResponse.NowPlaying.Entry
 	if len(track) == 1 {
 		nowPlayingInfo := NowPlayingInfo{
-			Title:       strings.Replace(track[0].Title, "&", "&amp;", -1),
-			Artist:      strings.Replace(track[0].Artist, "&", "&amp;", -1),
+			Title:       sanitizeString(track[0].Title),
+			Artist:      sanitizeString(track[0].Artist),
 			CoverBase64: getCoverBase64(track[0].CoverArt),
 		}
 
