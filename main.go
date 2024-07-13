@@ -53,6 +53,15 @@ func main() {
 		return returnSVGResponse(c, svg)
 	})
 
+	app.Get("/random-album-1.svg", func(c *fiber.Ctx) error {
+		c.Type("svg")
+
+		randomAlbum := getRandomAlbum()
+		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+
+		return returnSVGResponse(c, svg)
+	})
+
 	// entrypoint
 	mode := os.Getenv("MODE")
 	listenAddress := ""

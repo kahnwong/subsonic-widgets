@@ -15,6 +15,12 @@ type NowPlayingInfo struct {
 	CoverBase64 string
 }
 
+type RandomAlbumInfo struct {
+	Album       string
+	Artist      string
+	CoverBase64 string
+}
+
 // utils
 func sanitizeString(s string) string {
 	return strings.Replace(s, "&", "&amp;", -1)
@@ -51,4 +57,16 @@ func generateNowPlayingWidgetBase64(nowPlaying NowPlaying) string {
 	} else {
 		return renderTemplateBase64("templates/now-playing-null.svg", nil)
 	}
+}
+
+func generateRandomAlbumWidgetBase64(randomAlbum RandomAlbum) string {
+	album := randomAlbum.SubsonicResponse.AlbumList.Album[0]
+
+	albumInfo := RandomAlbumInfo{
+		Album:       sanitizeString(album.Album),
+		Artist:      sanitizeString(album.Artist),
+		CoverBase64: getCoverBase64(album.CoverArt),
+	}
+
+	return renderTemplateBase64("templates/random-album.svg", albumInfo)
 }
