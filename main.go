@@ -8,8 +8,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/gofiber/fiber/v2/middleware/cache"
-
 	"github.com/google/go-querystring/query"
 
 	"github.com/gofiber/fiber/v2"
@@ -23,6 +21,8 @@ var (
 )
 
 func returnSVGResponse(c *fiber.Ctx, svg string) error {
+	c.Response().Header.Add("Cache-Control", "no-cache")
+
 	data, err := base64.StdEncoding.DecodeString(svg)
 	if err != nil {
 		log.Fatal("error:", err)
@@ -40,15 +40,6 @@ func main() {
 	app.Use(limiter.New(limiter.Config{
 		Expiration: 1 * time.Minute,
 		Max:        20,
-	}))
-
-	// set no-cache
-	app.Use(cache.New(cache.Config{
-		Next: func(c *fiber.Ctx) bool {
-			return c.Query("noCache") == "true"
-		},
-		Expiration:   1 * time.Second,
-		CacheControl: true,
 	}))
 
 	// init
