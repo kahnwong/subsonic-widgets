@@ -50,6 +50,7 @@ func main() {
 		return c.SendString("Welcome to subsonic-widgets api")
 	})
 
+	// --- now playing --- //
 	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
@@ -59,50 +60,17 @@ func main() {
 		return returnSVGResponse(c, svg)
 	})
 
-	app.Get("/random-album-1.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
+	// --- random album --- //
+	for i := range 5 {
+		app.Get(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *fiber.Ctx) error {
+			c.Type("svg")
 
-		randomAlbum := getRandomAlbum()
-		svg := generateRandomAlbumWidgetBase64(randomAlbum)
+			randomAlbum := getRandomAlbum()
+			svg := generateRandomAlbumWidgetBase64(randomAlbum)
 
-		return returnSVGResponse(c, svg)
-	})
-
-	app.Get("/random-album-2.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
-
-		randomAlbum := getRandomAlbum()
-		svg := generateRandomAlbumWidgetBase64(randomAlbum)
-
-		return returnSVGResponse(c, svg)
-	})
-
-	app.Get("/random-album-3.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
-
-		randomAlbum := getRandomAlbum()
-		svg := generateRandomAlbumWidgetBase64(randomAlbum)
-
-		return returnSVGResponse(c, svg)
-	})
-
-	app.Get("/random-album-4.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
-
-		randomAlbum := getRandomAlbum()
-		svg := generateRandomAlbumWidgetBase64(randomAlbum)
-
-		return returnSVGResponse(c, svg)
-	})
-
-	app.Get("/random-album-5.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
-
-		randomAlbum := getRandomAlbum()
-		svg := generateRandomAlbumWidgetBase64(randomAlbum)
-
-		return returnSVGResponse(c, svg)
-	})
+			return returnSVGResponse(c, svg)
+		})
+	}
 
 	// entrypoint
 	mode := os.Getenv("MODE")
