@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /subsonic-widgets
+RUN go build -ldflags "-w -s" -o /subsonic-widgets
 
 FROM alpine:latest AS build-release-stage
 
