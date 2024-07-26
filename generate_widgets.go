@@ -2,11 +2,15 @@ package main
 
 import (
 	"bytes"
+	"embed"
 	"encoding/base64"
 	"log"
 	"strings"
 	"text/template"
 )
+
+//go:embed templates/*
+var templatesFS embed.FS
 
 // structs
 type NowPlayingInfo struct {
@@ -28,7 +32,7 @@ func sanitizeString(s string) string {
 
 func renderTemplateBase64(templatePath string, data any) string {
 	// init template
-	tmpl, err := template.ParseFiles(templatePath)
+	tmpl, err := template.ParseFS(templatesFS, templatePath)
 	if err != nil {
 		log.Printf("Error parsing template: %s", templatePath)
 	}
