@@ -8,11 +8,12 @@ RUN go mod download
 COPY templates templates
 COPY *.go ./
 
-RUN go build -ldflags "-w -s" -o /subsonic-widgets
+RUN CGO_ENABLED=0 go build -ldflags "-w -s" -o /subsonic-widgets
 
+# hadolint ignore=DL3007
 FROM alpine:latest AS build-release-stage
 
-WORKDIR /opt
+WORKDIR /opt/subsonic-widgets
 
 COPY --from=build-stage /subsonic-widgets .
 
