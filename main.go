@@ -36,10 +36,10 @@ func returnSVGResponse(c *fiber.Ctx, svg string) error {
 func main() {
 	app := fiber.New()
 
-	// 20 requests per 1 minute max
+	// 60 requests per 1 minute max
 	app.Use(limiter.New(limiter.Config{
 		Expiration: 1 * time.Minute,
-		Max:        20,
+		Max:        60,
 	}))
 
 	// init
