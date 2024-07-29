@@ -4,17 +4,12 @@ import (
 	"bytes"
 	"context"
 	"encoding/base64"
-	"encoding/json"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 	"time"
 
 	"github.com/carlmjohnson/requests"
 	"github.com/google/go-querystring/query"
-
-	"log"
 )
 
 // auth
@@ -129,23 +124,16 @@ type CoverEnv struct {
 
 // fetchers
 func getNowPlaying() NowPlaying {
-	// fetch response
 	requestUrl := fmt.Sprintf("%s/rest/getNowPlaying?%s", subsonicApiEndpoint, authParams.Encode())
-	resp, err := http.Get(requestUrl)
-	if err != nil {
-		log.Println("No response from request")
-	}
-	defer resp.Body.Close()
-
-	// read response
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Println("Error reading response body")
-	}
 
 	var response NowPlaying
-	if err := json.Unmarshal(body, &response); err != nil {
-		log.Println("Can not unmarshal JSON")
+	err := requests.
+		URL(requestUrl).
+		ToJSON(&response).
+		Fetch(context.Background())
+
+	if err != nil {
+		fmt.Println(err)
 	}
 
 	return response
@@ -180,7 +168,6 @@ func getCoverBase64(coverID string) string {
 	}
 	coverParams, _ := query.Values(coverEnv)
 
-	// fetch cover
 	requestUrl := fmt.Sprintf("%s/rest/getCoverArt?%s&%s", subsonicApiEndpoint, authParams.Encode(), coverParams.Encode())
 
 	var buffer bytes.Buffer
