@@ -3,6 +3,7 @@ module github.com/kahnwong/subsonic-widgets
 go 1.22.2
 
 require (
+	github.com/carlmjohnson/requests v0.24.1
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/google/go-querystring v1.1.0
 	github.com/joho/godotenv v1.5.1
@@ -21,5 +22,6 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/net v0.27.0 // indirect
+	golang.org/x/sys v0.22.0 // indirect
 )

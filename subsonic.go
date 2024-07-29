@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
@@ -9,6 +10,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/carlmjohnson/requests"
 	"github.com/google/go-querystring/query"
 
 	"log"
@@ -156,21 +158,16 @@ func getRandomAlbum() RandomAlbum {
 	randomAlbumParams, _ := query.Values(randomAlbumEnv) // fetch response
 
 	requestUrl := fmt.Sprintf("%s/rest/getAlbumList?%s&%s", subsonicApiEndpoint, authParams.Encode(), randomAlbumParams.Encode())
-	resp, err := http.Get(requestUrl)
-	if err != nil {
-		log.Println("No response from request")
-	}
-	defer resp.Body.Close()
-
-	// read response
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Println("Error reading response body")
-	}
 
 	var response RandomAlbum
-	if err := json.Unmarshal(body, &response); err != nil {
-		log.Println("Can not unmarshal JSON")
+	err := requests.
+		URL(requestUrl).
+		//Pathf(params).
+		ToJSON(&response).
+		Fetch(context.Background())
+
+	if err != nil {
+		fmt.Println(err)
 	}
 
 	return response
