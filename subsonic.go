@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/base64"
 	"encoding/json"
@@ -162,7 +163,6 @@ func getRandomAlbum() RandomAlbum {
 	var response RandomAlbum
 	err := requests.
 		URL(requestUrl).
-		//Pathf(params).
 		ToJSON(&response).
 		Fetch(context.Background())
 
@@ -182,17 +182,16 @@ func getCoverBase64(coverID string) string {
 
 	// fetch cover
 	requestUrl := fmt.Sprintf("%s/rest/getCoverArt?%s&%s", subsonicApiEndpoint, authParams.Encode(), coverParams.Encode())
-	resp, err := http.Get(requestUrl)
-	if err != nil {
-		log.Println("No response from request")
-	}
-	defer resp.Body.Close()
 
-	// convert to base64
-	body, err := io.ReadAll(resp.Body)
+	var buffer bytes.Buffer
+	err := requests.
+		URL(requestUrl).
+		ToBytesBuffer(&buffer).
+		Fetch(context.Background())
+
 	if err != nil {
-		log.Println("Error reading response body")
+		fmt.Println(err)
 	}
 
-	return base64.StdEncoding.EncodeToString(body)
+	return base64.StdEncoding.EncodeToString(buffer.Bytes())
 }
