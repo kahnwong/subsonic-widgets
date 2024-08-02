@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"embed"
 	"encoding/base64"
-	"log"
 	"strings"
 	"text/template"
 )
@@ -34,14 +33,14 @@ func renderTemplateBase64(templatePath string, data any) string {
 	// init template
 	tmpl, err := template.ParseFS(templatesFS, templatePath)
 	if err != nil {
-		log.Printf("Error parsing template: %s", templatePath)
+		logger.Error().Msgf("Error parsing template: %s", templatePath)
 	}
 
 	// render template
 	var tpl bytes.Buffer
 	err = tmpl.Execute(&tpl, data)
 	if err != nil {
-		log.Println("Error rendering now playing")
+		logger.Error().Msgf("Error rendering now playing: %s", templatePath)
 	}
 
 	return base64.StdEncoding.EncodeToString(tpl.Bytes())

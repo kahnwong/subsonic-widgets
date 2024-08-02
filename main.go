@@ -3,10 +3,12 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
-	"log"
 	"net/url"
 	"os"
 	"time"
+
+	"github.com/gofiber/contrib/fiberzerolog"
+	"github.com/rs/zerolog"
 
 	"github.com/google/go-querystring/query"
 
@@ -16,6 +18,8 @@ import (
 )
 
 var (
+	mode = os.Getenv("MODE")
+
 	subsonicApiEndpoint = os.Getenv("SUBSONIC_API_ENDPOINT")
 	authValues          = SubsonicAuth{
 		Username: os.Getenv("USERNAME"),
@@ -25,8 +29,9 @@ var (
 		Client:   "subsonic-widgets",
 		Format:   "json",
 	}
-
 	authParams url.Values
+
+	logger zerolog.Logger
 )
 
 func returnSVGResponse(c *fiber.Ctx, svg string) error {
@@ -34,7 +39,7 @@ func returnSVGResponse(c *fiber.Ctx, svg string) error {
 
 	data, err := base64.StdEncoding.DecodeString(svg)
 	if err != nil {
-		log.Fatal("error:", err)
+		logger.Error().Err(err).Msgf("Error decoding SVG")
 	}
 
 	_, err = c.Write(data)
@@ -47,7 +52,28 @@ func init() {
 }
 
 func main() {
+	// entrypoint
+	listenAddress := ""
+	isPrettyLog := false
+	if mode == "production" {
+		listenAddress = ":3000"
+	} else if mode == "development" {
+		listenAddress = "localhost:3000"
+		isPrettyLog = true
+	} else {
+		fmt.Println("Listen address is not set")
+	}
+
+	// app
 	app := fiber.New()
+	logger = zerolog.New(os.Stderr).With().Timestamp().Logger()
+	if isPrettyLog {
+		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+	}
+
+	app.Use(fiberzerolog.New(fiberzerolog.Config{
+		Logger: &logger,
+	}))
 
 	// 60 requests per 1 minute max
 	app.Use(limiter.New(limiter.Config{
@@ -82,15 +108,7 @@ func main() {
 		})
 	}
 
-	// entrypoint
-	mode := os.Getenv("MODE")
-	listenAddress := ""
-	if mode == "production" {
-		listenAddress = ":3000"
-	} else if mode == "development" {
-		listenAddress = "localhost:3000"
-	} else {
-		fmt.Println("Listen address is not set")
+	if err := app.Listen(listenAddress); err != nil {
+		logger.Fatal().Err(err).Msg("Fiber app error")
 	}
-	log.Fatal(app.Listen(listenAddress))
 }

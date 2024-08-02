@@ -4,9 +4,11 @@ go 1.22.2
 
 require (
 	github.com/carlmjohnson/requests v0.24.1
+	github.com/gofiber/contrib/fiberzerolog v1.0.2
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/google/go-querystring v1.1.0
 	github.com/joho/godotenv v1.5.1
+	github.com/rs/zerolog v1.33.0
 )
 
 require (
