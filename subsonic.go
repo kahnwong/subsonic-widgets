@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
-	"os"
+	"net/http"
 	"time"
 
 	"github.com/carlmjohnson/requests"
@@ -13,22 +13,13 @@ import (
 )
 
 // auth
-type subsonicAuth struct {
+type SubsonicAuth struct {
 	Username string `url:"u"`
 	Token    string `url:"t"`
 	Salt     string `url:"s"`
 	Version  string `url:"v"`
 	Client   string `url:"c"`
 	Format   string `url:"f"`
-}
-
-var authEnv = subsonicAuth{
-	Username: os.Getenv("USERNAME"),
-	Token:    os.Getenv("TOKEN"),
-	Salt:     os.Getenv("SALT"),
-	Version:  "1.16.1",
-	Client:   "subsonic-widgets",
-	Format:   "json",
 }
 
 // structs
@@ -112,23 +103,25 @@ type RandomAlbum struct {
 	} `json:"subsonic-response"`
 }
 
-type RandomAlbumEnv struct {
+// request params
+type RandomAlbumRequest struct {
 	Type string `url:"type"`
 	Size int64  `url:"size"`
 }
 
-type CoverEnv struct {
+type CoverRequest struct {
 	ID   string `url:"id"`
 	Size int64  `url:"size"`
 }
 
 // fetchers
 func getNowPlaying() NowPlaying {
-	requestUrl := fmt.Sprintf("%s/rest/getNowPlaying?%s", subsonicApiEndpoint, authParams.Encode())
-
 	var response NowPlaying
 	err := requests.
-		URL(requestUrl).
+		URL(subsonicApiEndpoint).
+		Method(http.MethodGet).
+		Path("rest/getNowPlaying").
+		Params(authParams).
 		ToJSON(&response).
 		Fetch(context.Background())
 
@@ -140,17 +133,19 @@ func getNowPlaying() NowPlaying {
 }
 
 func getRandomAlbum() RandomAlbum {
-	randomAlbumEnv := RandomAlbumEnv{
+	randomAlbumEnv := RandomAlbumRequest{
 		Type: "random",
 		Size: 1,
 	}
 	randomAlbumParams, _ := query.Values(randomAlbumEnv) // fetch response
 
-	requestUrl := fmt.Sprintf("%s/rest/getAlbumList?%s&%s", subsonicApiEndpoint, authParams.Encode(), randomAlbumParams.Encode())
-
 	var response RandomAlbum
 	err := requests.
-		URL(requestUrl).
+		URL(subsonicApiEndpoint).
+		Method(http.MethodGet).
+		Path("rest/getAlbumList").
+		Params(authParams).
+		Params(randomAlbumParams).
 		ToJSON(&response).
 		Fetch(context.Background())
 
@@ -162,17 +157,19 @@ func getRandomAlbum() RandomAlbum {
 }
 
 func getCoverBase64(coverID string) string {
-	coverEnv := CoverEnv{
+	coverEnv := CoverRequest{
 		ID:   coverID,
 		Size: 48,
 	}
 	coverParams, _ := query.Values(coverEnv)
 
-	requestUrl := fmt.Sprintf("%s/rest/getCoverArt?%s&%s", subsonicApiEndpoint, authParams.Encode(), coverParams.Encode())
-
 	var buffer bytes.Buffer
 	err := requests.
-		URL(requestUrl).
+		URL(subsonicApiEndpoint).
+		Method(http.MethodGet).
+		Path("rest/getCoverArt").
+		Params(authParams).
+		Params(coverParams).
 		ToBytesBuffer(&buffer).
 		Fetch(context.Background())
 

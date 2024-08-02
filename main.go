@@ -17,7 +17,16 @@ import (
 
 var (
 	subsonicApiEndpoint = os.Getenv("SUBSONIC_API_ENDPOINT")
-	authParams          url.Values
+	authValues          = SubsonicAuth{
+		Username: os.Getenv("USERNAME"),
+		Token:    os.Getenv("TOKEN"),
+		Salt:     os.Getenv("SALT"),
+		Version:  "1.16.1",
+		Client:   "subsonic-widgets",
+		Format:   "json",
+	}
+
+	authParams url.Values
 )
 
 func returnSVGResponse(c *fiber.Ctx, svg string) error {
@@ -33,6 +42,10 @@ func returnSVGResponse(c *fiber.Ctx, svg string) error {
 	return err
 }
 
+func init() {
+	authParams, _ = query.Values(authValues)
+}
+
 func main() {
 	app := fiber.New()
 
@@ -41,9 +54,6 @@ func main() {
 		Expiration: 1 * time.Minute,
 		Max:        60,
 	}))
-
-	// init
-	authParams, _ = query.Values(authEnv)
 
 	// routes
 	app.Get("/", func(c *fiber.Ctx) error {
