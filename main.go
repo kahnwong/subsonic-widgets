@@ -8,13 +8,12 @@ import (
 	"time"
 
 	"github.com/gofiber/contrib/fiberzerolog"
-	"github.com/rs/zerolog"
-
-	"github.com/google/go-querystring/query"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/limiter"
+	"github.com/google/go-querystring/query"
 	_ "github.com/joho/godotenv/autoload"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 )
 
 var (
@@ -61,7 +60,7 @@ func main() {
 		listenAddress = "localhost:3000"
 		isPrettyLog = true
 	} else {
-		fmt.Println("Listen address is not set")
+		log.Fatal().Msg("Listen address is not set")
 	}
 
 	// app

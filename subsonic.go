@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"context"
 	"encoding/base64"
-	"fmt"
 	"net/http"
 	"time"
 
 	"github.com/carlmjohnson/requests"
 	"github.com/google/go-querystring/query"
+	"github.com/rs/zerolog/log"
 )
 
 // auth
@@ -126,7 +126,7 @@ func getNowPlaying() NowPlaying {
 		Fetch(context.Background())
 
 	if err != nil {
-		fmt.Println(err)
+		log.Error().Err(err).Msg("Failed to get NowPlaying")
 	}
 
 	return response
@@ -150,7 +150,7 @@ func getRandomAlbum() RandomAlbum {
 		Fetch(context.Background())
 
 	if err != nil {
-		fmt.Println(err)
+		log.Error().Err(err).Msg("Failed to get RandomAlbum")
 	}
 
 	return response
@@ -174,7 +174,7 @@ func getCoverBase64(coverID string) string {
 		Fetch(context.Background())
 
 	if err != nil {
-		fmt.Println(err)
+		log.Error().Err(err).Msg("Failed to get Cover")
 	}
 
 	return base64.StdEncoding.EncodeToString(buffer.Bytes())
