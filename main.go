@@ -54,12 +54,13 @@ func main() {
 	// entrypoint
 	listenAddress := ""
 	isPrettyLog := false
-	if mode == "production" {
+	switch mode {
+	case "production":
 		listenAddress = ":3000"
-	} else if mode == "development" {
+	case "development":
 		listenAddress = "localhost:3000"
 		isPrettyLog = true
-	} else {
+	default:
 		log.Fatal().Msg("Listen address is not set")
 	}
 
