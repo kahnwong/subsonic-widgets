@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS build-stage
+FROM golang:1.22-alpine AS build
 
 WORKDIR /app
 
@@ -11,12 +11,7 @@ COPY *.go ./
 RUN CGO_ENABLED=0 go build -ldflags "-w -s" -o /subsonic-widgets
 
 # hadolint ignore=DL3007
-FROM alpine:latest AS build-release-stage
+FROM gcr.io/distroless/static-debian11:latest
+COPY --from=build /subsonic-widgets /
 
-WORKDIR /opt/subsonic-widgets
-
-COPY --from=build-stage /subsonic-widgets .
-
-RUN chmod +x subsonic-widgets
-
-ENTRYPOINT ["./subsonic-widgets"]
+CMD ["/subsonic-widgets"]
