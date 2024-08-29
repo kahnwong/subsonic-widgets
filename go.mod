@@ -1,6 +1,6 @@
 module github.com/kahnwong/subsonic-widgets
 
-go 1.22.2
+go 1.23
 
 require (
 	github.com/carlmjohnson/requests v0.24.2
