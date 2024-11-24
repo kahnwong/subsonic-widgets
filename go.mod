@@ -3,7 +3,7 @@ module github.com/kahnwong/subsonic-widgets
 go 1.23
 
 require (
-	github.com/carlmjohnson/requests v0.24.2
+	github.com/carlmjohnson/requests v0.24.3
 	github.com/gofiber/contrib/fiberzerolog v1.0.2
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/google/go-querystring v1.1.0
