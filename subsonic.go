@@ -126,7 +126,7 @@ func getNowPlaying() NowPlaying {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Err(err).Msg("Failed to get NowPlaying")
+		log.Error().Msg("Failed to get NowPlaying")
 	}
 
 	return response
@@ -150,7 +150,7 @@ func getRandomAlbum() RandomAlbum {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Err(err).Msg("Failed to get RandomAlbum")
+		log.Error().Msg("Failed to get RandomAlbum")
 	}
 
 	return response
@@ -174,7 +174,7 @@ func getCoverBase64(coverID string) string {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Err(err).Msg("Failed to get Cover")
+		log.Error().Msg("Failed to get Cover")
 	}
 
 	return base64.StdEncoding.EncodeToString(buffer.Bytes())
