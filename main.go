@@ -47,7 +47,11 @@ func returnSVGResponse(c *fiber.Ctx, svg string) error {
 }
 
 func init() {
-	authParams, _ = query.Values(authValues)
+	var err error
+	authParams, err = query.Values(authValues)
+	if err != nil {
+		log.Fatal().Err(err).Msg("Failed to create auth parameters")
+	}
 }
 
 func main() {
@@ -90,8 +94,17 @@ func main() {
 	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
 		c.Type("svg")
 
-		nowPlaying := getNowPlaying()
-		svg := generateNowPlayingWidgetBase64(nowPlaying)
+		nowPlaying, err := getNowPlaying()
+		if err != nil {
+			logger.Error().Err(err).Msg("Failed to get now playing")
+			return c.Status(fiber.StatusInternalServerError).SendString("Error fetching now playing data")
+		}
+
+		svg, err := generateNowPlayingWidgetBase64(nowPlaying)
+		if err != nil {
+			logger.Error().Err(err).Msg("Failed to generate now playing widget")
+			return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+		}
 
 		return returnSVGResponse(c, svg)
 	})
@@ -101,8 +114,17 @@ func main() {
 		app.Get(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *fiber.Ctx) error {
 			c.Type("svg")
 
-			randomAlbum := getRandomAlbum()
-			svg := generateRandomAlbumWidgetBase64(randomAlbum)
+			randomAlbum, err := getRandomAlbum()
+			if err != nil {
+				logger.Error().Err(err).Msg("Failed to get random album")
+				return c.Status(fiber.StatusInternalServerError).SendString("Error fetching random album data")
+			}
+
+			svg, err := generateRandomAlbumWidgetBase64(randomAlbum)
+			if err != nil {
+				logger.Error().Err(err).Msg("Failed to generate random album widget")
+				return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+			}
 
 			return returnSVGResponse(c, svg)
 		})

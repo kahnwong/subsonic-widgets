@@ -9,7 +9,6 @@ import (
 
 	"github.com/carlmjohnson/requests"
 	"github.com/google/go-querystring/query"
-	"github.com/rs/zerolog/log"
 )
 
 // auth
@@ -115,7 +114,7 @@ type CoverRequest struct {
 }
 
 // fetchers
-func getNowPlaying() NowPlaying {
+func getNowPlaying() (NowPlaying, error) {
 	var response NowPlaying
 	err := requests.
 		URL(subsonicApiEndpoint).
@@ -126,21 +125,24 @@ func getNowPlaying() NowPlaying {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Msg("Failed to get NowPlaying")
+		return response, err
 	}
 
-	return response
+	return response, nil
 }
 
-func getRandomAlbum() RandomAlbum {
+func getRandomAlbum() (RandomAlbum, error) {
 	randomAlbumEnv := RandomAlbumRequest{
 		Type: "random",
 		Size: 1,
 	}
-	randomAlbumParams, _ := query.Values(randomAlbumEnv) // fetch response
+	randomAlbumParams, err := query.Values(randomAlbumEnv)
+	if err != nil {
+		return RandomAlbum{}, err
+	}
 
 	var response RandomAlbum
-	err := requests.
+	err = requests.
 		URL(subsonicApiEndpoint).
 		Method(http.MethodGet).
 		Path("rest/getAlbumList").
@@ -150,21 +152,24 @@ func getRandomAlbum() RandomAlbum {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Msg("Failed to get RandomAlbum")
+		return response, err
 	}
 
-	return response
+	return response, nil
 }
 
-func getCoverBase64(coverID string) string {
+func getCoverBase64(coverID string) (string, error) {
 	coverEnv := CoverRequest{
 		ID:   coverID,
 		Size: 48,
 	}
-	coverParams, _ := query.Values(coverEnv)
+	coverParams, err := query.Values(coverEnv)
+	if err != nil {
+		return "", err
+	}
 
 	var buffer bytes.Buffer
-	err := requests.
+	err = requests.
 		URL(subsonicApiEndpoint).
 		Method(http.MethodGet).
 		Path("rest/getCoverArt").
@@ -174,8 +179,8 @@ func getCoverBase64(coverID string) string {
 		Fetch(context.Background())
 
 	if err != nil {
-		log.Error().Msg("Failed to get Cover")
+		return "", err
 	}
 
-	return base64.StdEncoding.EncodeToString(buffer.Bytes())
+	return base64.StdEncoding.EncodeToString(buffer.Bytes()), nil
 }
