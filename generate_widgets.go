@@ -26,7 +26,7 @@ type RandomAlbumInfo struct {
 
 // utils
 func sanitizeString(s string) string {
-	return strings.Replace(s, "&", "&amp;", -1)
+	return strings.ReplaceAll(s, "&", "&amp;")
 }
 
 func renderTemplateBase64(templatePath string, data any) (string, error) {

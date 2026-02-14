@@ -3,17 +3,19 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
+	"net/http"
 	"net/url"
 	"os"
 	"time"
 
-	"github.com/gofiber/contrib/fiberzerolog"
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/limiter"
+	"github.com/gin-gonic/gin"
 	"github.com/google/go-querystring/query"
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
+	"github.com/ulule/limiter/v3"
+	mgin "github.com/ulule/limiter/v3/drivers/middleware/gin"
+	"github.com/ulule/limiter/v3/drivers/store/memory"
 )
 
 var (
@@ -33,17 +35,44 @@ var (
 	logger zerolog.Logger
 )
 
-func returnSVGResponse(c *fiber.Ctx, svg string) error {
-	c.Response().Header.Add("Cache-Control", "no-cache")
+func returnSVGResponse(c *gin.Context, svg string) {
+	c.Header("Cache-Control", "no-cache")
 
 	data, err := base64.StdEncoding.DecodeString(svg)
 	if err != nil {
-		logger.Error().Err(err).Msgf("Error decoding SVG")
+		logger.Error().Err(err).Msg("Error decoding SVG")
+		c.String(http.StatusInternalServerError, "Error decoding SVG")
+		return
 	}
 
-	_, err = c.Write(data)
+	c.Data(http.StatusOK, "image/svg+xml", data)
+}
 
-	return err
+func zerologMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		start := time.Now()
+		path := c.Request.URL.Path
+		raw := c.Request.URL.RawQuery
+
+		c.Next()
+
+		latency := time.Since(start)
+		statusCode := c.Writer.Status()
+		method := c.Request.Method
+		clientIP := c.ClientIP()
+
+		if raw != "" {
+			path = path + "?" + raw
+		}
+
+		logger.Info().
+			Str("method", method).
+			Str("path", path).
+			Int("status", statusCode).
+			Dur("latency", latency).
+			Str("ip", clientIP).
+			Msg("request")
+	}
 }
 
 func init() {
@@ -61,76 +90,81 @@ func main() {
 	switch mode {
 	case "production":
 		listenAddress = ":3000"
+		gin.SetMode(gin.ReleaseMode)
 	case "development":
 		listenAddress = "localhost:3000"
 		isPrettyLog = true
+		gin.SetMode(gin.DebugMode)
 	default:
 		log.Fatal().Msg("Listen address is not set")
 	}
 
-	// app
-	app := fiber.New()
+	// logger setup
 	logger = zerolog.New(os.Stderr).With().Timestamp().Logger()
 	if isPrettyLog {
 		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 	}
 
-	app.Use(fiberzerolog.New(fiberzerolog.Config{
-		Logger: &logger,
-	}))
+	// rate limiter setup - 60 requests per 1 minute max
+	rate := limiter.Rate{
+		Period: 1 * time.Minute,
+		Limit:  60,
+	}
+	store := memory.NewStore()
+	rateLimiter := limiter.New(store, rate)
 
-	// 60 requests per 1 minute max
-	app.Use(limiter.New(limiter.Config{
-		Expiration: 1 * time.Minute,
-		Max:        60,
-	}))
+	// app
+	router := gin.New()
+	router.Use(gin.Recovery())
+	router.Use(zerologMiddleware())
+	router.Use(mgin.NewMiddleware(rateLimiter))
 
 	// routes
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Welcome to subsonic-widgets api")
+	router.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "Welcome to subsonic-widgets api")
 	})
 
 	// --- now playing --- //
-	app.Get("/now-playing.svg", func(c *fiber.Ctx) error {
-		c.Type("svg")
-
+	router.GET("/now-playing.svg", func(c *gin.Context) {
 		nowPlaying, err := getNowPlaying()
 		if err != nil {
 			logger.Error().Err(err).Msg("Failed to get now playing")
-			return c.Status(fiber.StatusInternalServerError).SendString("Error fetching now playing data")
+			c.String(http.StatusInternalServerError, "Error fetching now playing data")
+			return
 		}
 
 		svg, err := generateNowPlayingWidgetBase64(nowPlaying)
 		if err != nil {
 			logger.Error().Err(err).Msg("Failed to generate now playing widget")
-			return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+			c.String(http.StatusInternalServerError, "Error generating widget")
+			return
 		}
 
-		return returnSVGResponse(c, svg)
+		returnSVGResponse(c, svg)
 	})
 
 	// --- random album --- //
 	for i := range 5 {
-		app.Get(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *fiber.Ctx) error {
-			c.Type("svg")
-
+		router.GET(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *gin.Context) {
 			randomAlbum, err := getRandomAlbum()
 			if err != nil {
 				logger.Error().Err(err).Msg("Failed to get random album")
-				return c.Status(fiber.StatusInternalServerError).SendString("Error fetching random album data")
+				c.String(http.StatusInternalServerError, "Error fetching random album data")
+				return
 			}
 
 			svg, err := generateRandomAlbumWidgetBase64(randomAlbum)
 			if err != nil {
 				logger.Error().Err(err).Msg("Failed to generate random album widget")
-				return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+				c.String(http.StatusInternalServerError, "Error generating widget")
+				return
 			}
 
-			return returnSVGResponse(c, svg)
+			returnSVGResponse(c, svg)
 		})
 	}
 
-	if err := app.Listen(listenAddress); err != nil {
-		logger.Fatal().Err(err).Msg("Fiber app error")
+	if err := router.Run(listenAddress); err != nil {
+		logger.Fatal().Err(err).Msg("Gin app error")
 	}
 }
