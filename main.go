@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -80,11 +81,30 @@ func main() {
 	isPrettyLog := mode == "development"
 
 	// logger setup
-	logger := zerolog.New(os.Stderr).With().Timestamp().Logger()
+	level := zerolog.InfoLevel
+	logLevel := strings.TrimSpace(os.Getenv("LOG_LEVEL"))
+	var levelErr error
+	if logLevel != "" {
+		parsedLevel, err := zerolog.ParseLevel(strings.ToLower(logLevel))
+		if err != nil {
+			levelErr = err
+		} else {
+			level = parsedLevel
+		}
+	}
+
+	logger := zerolog.New(os.Stderr).Level(level).With().Timestamp().Logger()
 	if isPrettyLog {
 		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 	}
-	slog.SetDefault(slog.New(slogzerolog.Option{Logger: &logger}.NewZerologHandler()))
+	slog.SetDefault(slog.New(slogzerolog.Option{
+		Level:  slogzerolog.ZeroLogLeveler{Logger: &logger},
+		Logger: &logger,
+	}.NewZerologHandler()))
+	if levelErr != nil {
+		slog.Error("Invalid LOG_LEVEL", slog.String("level", logLevel), slog.Any("error", levelErr))
+		os.Exit(1)
+	}
 
 	switch mode {
 	case "production":
