@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"net/url"
 	"os"
@@ -12,7 +13,7 @@ import (
 	"github.com/google/go-querystring/query"
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/rs/zerolog"
-	"github.com/rs/zerolog/log"
+	slogzerolog "github.com/samber/slog-zerolog/v2"
 	"github.com/ulule/limiter/v3"
 	mgin "github.com/ulule/limiter/v3/drivers/middleware/gin"
 	"github.com/ulule/limiter/v3/drivers/store/memory"
@@ -31,8 +32,6 @@ var (
 		Format:   "json",
 	}
 	authParams url.Values
-
-	logger zerolog.Logger
 )
 
 func returnSVGResponse(c *gin.Context, svg string) {
@@ -40,7 +39,7 @@ func returnSVGResponse(c *gin.Context, svg string) {
 
 	data, err := base64.StdEncoding.DecodeString(svg)
 	if err != nil {
-		logger.Error().Err(err).Msg("Error decoding SVG")
+		slog.Error("Error decoding SVG", slog.Any("error", err))
 		c.String(http.StatusInternalServerError, "Error decoding SVG")
 		return
 	}
@@ -65,44 +64,45 @@ func zerologMiddleware() gin.HandlerFunc {
 			path = path + "?" + raw
 		}
 
-		logger.Info().
-			Str("method", method).
-			Str("path", path).
-			Int("status", statusCode).
-			Dur("latency", latency).
-			Str("ip", clientIP).
-			Msg("request")
-	}
-}
-
-func init() {
-	var err error
-	authParams, err = query.Values(authValues)
-	if err != nil {
-		log.Fatal().Err(err).Msg("Failed to create auth parameters")
+		slog.Info("request",
+			slog.String("method", method),
+			slog.String("path", path),
+			slog.Int("status", statusCode),
+			slog.Duration("latency", latency),
+			slog.String("ip", clientIP),
+		)
 	}
 }
 
 func main() {
 	// entrypoint
 	listenAddress := ""
-	isPrettyLog := false
+	isPrettyLog := mode == "development"
+
+	// logger setup
+	logger := zerolog.New(os.Stderr).With().Timestamp().Logger()
+	if isPrettyLog {
+		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+	}
+	slog.SetDefault(slog.New(slogzerolog.Option{Logger: &logger}.NewZerologHandler()))
+
 	switch mode {
 	case "production":
 		listenAddress = ":3000"
 		gin.SetMode(gin.ReleaseMode)
 	case "development":
 		listenAddress = "localhost:3000"
-		isPrettyLog = true
 		gin.SetMode(gin.DebugMode)
 	default:
-		log.Fatal().Msg("Listen address is not set")
+		slog.Error("Listen address is not set")
+		os.Exit(1)
 	}
 
-	// logger setup
-	logger = zerolog.New(os.Stderr).With().Timestamp().Logger()
-	if isPrettyLog {
-		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+	var err error
+	authParams, err = query.Values(authValues)
+	if err != nil {
+		slog.Error("Failed to create auth parameters", slog.Any("error", err))
+		os.Exit(1)
 	}
 
 	// rate limiter setup - 60 requests per 1 minute max
@@ -128,14 +128,14 @@ func main() {
 	router.GET("/now-playing.svg", func(c *gin.Context) {
 		nowPlaying, err := getNowPlaying()
 		if err != nil {
-			logger.Error().Err(err).Msg("Failed to get now playing")
+			slog.Error("Failed to get now playing", slog.Any("error", err))
 			c.String(http.StatusInternalServerError, "Error fetching now playing data")
 			return
 		}
 
 		svg, err := generateNowPlayingWidgetBase64(nowPlaying)
 		if err != nil {
-			logger.Error().Err(err).Msg("Failed to generate now playing widget")
+			slog.Error("Failed to generate now playing widget", slog.Any("error", err))
 			c.String(http.StatusInternalServerError, "Error generating widget")
 			return
 		}
@@ -148,14 +148,14 @@ func main() {
 		router.GET(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *gin.Context) {
 			randomAlbum, err := getRandomAlbum()
 			if err != nil {
-				logger.Error().Err(err).Msg("Failed to get random album")
+				slog.Error("Failed to get random album", slog.Any("error", err))
 				c.String(http.StatusInternalServerError, "Error fetching random album data")
 				return
 			}
 
 			svg, err := generateRandomAlbumWidgetBase64(randomAlbum)
 			if err != nil {
-				logger.Error().Err(err).Msg("Failed to generate random album widget")
+				slog.Error("Failed to generate random album widget", slog.Any("error", err))
 				c.String(http.StatusInternalServerError, "Error generating widget")
 				return
 			}
@@ -165,6 +165,7 @@ func main() {
 	}
 
 	if err := router.Run(listenAddress); err != nil {
-		logger.Fatal().Err(err).Msg("Gin app error")
+		slog.Error("Gin app error", slog.Any("error", err))
+		os.Exit(1)
 	}
 }

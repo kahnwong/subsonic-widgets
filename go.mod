@@ -8,6 +8,7 @@ require (
 	github.com/google/go-querystring v1.2.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.35.1
+	github.com/samber/slog-zerolog/v2 v2.9.2
 	github.com/ulule/limiter/v3 v3.11.2
 )
 
@@ -34,10 +35,11 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/quic-go/qpack v0.6.0 // indirect
 	github.com/quic-go/quic-go v0.59.0 // indirect
+	github.com/samber/lo v1.53.0 // indirect
+	github.com/samber/slog-common v0.21.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.3.1 // indirect
 	go.mongodb.org/mongo-driver/v2 v2.5.0 // indirect
-	go.uber.org/mock v0.6.0 // indirect
 	golang.org/x/arch v0.24.0 // indirect
 	golang.org/x/crypto v0.48.0 // indirect
 	golang.org/x/net v0.51.0 // indirect
