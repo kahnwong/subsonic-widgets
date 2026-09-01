@@ -4,20 +4,19 @@ import (
 	"encoding/base64"
 	"fmt"
 	"log/slog"
-	"net/http"
 	"net/url"
 	"os"
 	"strings"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3/middleware/limiter"
+	"github.com/gofiber/fiber/v3/middleware/recover"
 	"github.com/google/go-querystring/query"
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/rs/zerolog"
+	slogfiber "github.com/samber/slog-fiber"
 	slogzerolog "github.com/samber/slog-zerolog/v2"
-	"github.com/ulule/limiter/v3"
-	mgin "github.com/ulule/limiter/v3/drivers/middleware/gin"
-	"github.com/ulule/limiter/v3/drivers/store/memory"
 )
 
 var (
@@ -35,55 +34,23 @@ var (
 	authParams url.Values
 )
 
-func returnSVGResponse(c *gin.Context, svg string) {
-	c.Header("Cache-Control", "no-cache")
+func returnSVGResponse(c fiber.Ctx, svg string) error {
+	c.Set(fiber.HeaderCacheControl, "no-cache")
 
 	data, err := base64.StdEncoding.DecodeString(svg)
 	if err != nil {
 		slog.Error("Error decoding SVG", slog.Any("error", err))
-		c.String(http.StatusInternalServerError, "Error decoding SVG")
-		return
+		return c.Status(fiber.StatusInternalServerError).SendString("Error decoding SVG")
 	}
 
-	c.Data(http.StatusOK, "image/svg+xml", data)
+	c.Set(fiber.HeaderContentType, "image/svg+xml")
+	return c.Status(fiber.StatusOK).Send(data)
 }
 
-func zerologMiddleware() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		start := time.Now()
-		path := c.Request.URL.Path
-		raw := c.Request.URL.RawQuery
-
-		c.Next()
-
-		latency := time.Since(start)
-		statusCode := c.Writer.Status()
-		method := c.Request.Method
-		clientIP := c.ClientIP()
-
-		if raw != "" {
-			path = path + "?" + raw
-		}
-
-		slog.Info("request",
-			slog.String("method", method),
-			slog.String("path", path),
-			slog.Int("status", statusCode),
-			slog.Duration("latency", latency),
-			slog.String("ip", clientIP),
-		)
-	}
-}
-
-func main() {
-	// entrypoint
-	listenAddress := ""
-	isPrettyLog := mode == "development"
-
-	// logger setup
-	level := zerolog.InfoLevel
-	logLevel := strings.TrimSpace(os.Getenv("LOG_LEVEL"))
+func newLogger(logLevel string, pretty bool) (*slog.Logger, error) {
+	level := zerolog.DebugLevel
 	var levelErr error
+	logLevel = strings.TrimSpace(logLevel)
 	if logLevel != "" {
 		parsedLevel, err := zerolog.ParseLevel(strings.ToLower(logLevel))
 		if err != nil {
@@ -94,98 +61,96 @@ func main() {
 	}
 
 	logger := zerolog.New(os.Stderr).Level(level).With().Timestamp().Logger()
-	if isPrettyLog {
+	if pretty {
 		logger = logger.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 	}
-	slog.SetDefault(slog.New(slogzerolog.Option{
+
+	return slog.New(slogzerolog.Option{
 		Level:  slogzerolog.ZeroLogLeveler{Logger: &logger},
 		Logger: &logger,
-	}.NewZerologHandler()))
-	if levelErr != nil {
-		slog.Error("Invalid LOG_LEVEL", slog.String("level", logLevel), slog.Any("error", levelErr))
+	}.NewZerologHandler()), levelErr
+}
+
+func newApp(logger *slog.Logger) *fiber.App {
+	app := fiber.New()
+	app.Use(slogfiber.New(logger))
+	app.Use(recover.New())
+	app.Use(limiter.New(limiter.Config{
+		Max:        60,
+		Expiration: time.Minute,
+	}))
+
+	// routes
+	app.Get("/", func(c fiber.Ctx) error {
+		return c.SendString("Welcome to subsonic-widgets api")
+	})
+
+	// --- now playing --- //
+	app.Get("/now-playing.svg", func(c fiber.Ctx) error {
+		nowPlaying, err := getNowPlaying()
+		if err != nil {
+			slog.Error("Failed to get now playing", slog.Any("error", err))
+			return c.Status(fiber.StatusInternalServerError).SendString("Error fetching now playing data")
+		}
+
+		svg, err := generateNowPlayingWidgetBase64(nowPlaying)
+		if err != nil {
+			slog.Error("Failed to generate now playing widget", slog.Any("error", err))
+			return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+		}
+
+		return returnSVGResponse(c, svg)
+	})
+
+	// --- random album --- //
+	for i := range 5 {
+		app.Get(fmt.Sprintf("/random-album-%v.svg", i+1), func(c fiber.Ctx) error {
+			randomAlbum, err := getRandomAlbum()
+			if err != nil {
+				slog.Error("Failed to get random album", slog.Any("error", err))
+				return c.Status(fiber.StatusInternalServerError).SendString("Error fetching random album data")
+			}
+
+			svg, err := generateRandomAlbumWidgetBase64(randomAlbum)
+			if err != nil {
+				slog.Error("Failed to generate random album widget", slog.Any("error", err))
+				return c.Status(fiber.StatusInternalServerError).SendString("Error generating widget")
+			}
+
+			return returnSVGResponse(c, svg)
+		})
+	}
+
+	return app
+}
+
+func main() {
+	logger, err := newLogger(os.Getenv("LOG_LEVEL"), mode == "development")
+	slog.SetDefault(logger)
+	if err != nil {
+		slog.Error("Invalid LOG_LEVEL", slog.String("level", os.Getenv("LOG_LEVEL")), slog.Any("error", err))
 		os.Exit(1)
 	}
 
+	listenAddress := ""
 	switch mode {
 	case "production":
 		listenAddress = ":3000"
-		gin.SetMode(gin.ReleaseMode)
 	case "development":
 		listenAddress = "localhost:3000"
-		gin.SetMode(gin.DebugMode)
 	default:
 		slog.Error("Listen address is not set")
 		os.Exit(1)
 	}
 
-	var err error
 	authParams, err = query.Values(authValues)
 	if err != nil {
 		slog.Error("Failed to create auth parameters", slog.Any("error", err))
 		os.Exit(1)
 	}
 
-	// rate limiter setup - 60 requests per 1 minute max
-	rate := limiter.Rate{
-		Period: 1 * time.Minute,
-		Limit:  60,
-	}
-	store := memory.NewStore()
-	rateLimiter := limiter.New(store, rate)
-
-	// app
-	router := gin.New()
-	router.Use(gin.Recovery())
-	router.Use(zerologMiddleware())
-	router.Use(mgin.NewMiddleware(rateLimiter))
-
-	// routes
-	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Welcome to subsonic-widgets api")
-	})
-
-	// --- now playing --- //
-	router.GET("/now-playing.svg", func(c *gin.Context) {
-		nowPlaying, err := getNowPlaying()
-		if err != nil {
-			slog.Error("Failed to get now playing", slog.Any("error", err))
-			c.String(http.StatusInternalServerError, "Error fetching now playing data")
-			return
-		}
-
-		svg, err := generateNowPlayingWidgetBase64(nowPlaying)
-		if err != nil {
-			slog.Error("Failed to generate now playing widget", slog.Any("error", err))
-			c.String(http.StatusInternalServerError, "Error generating widget")
-			return
-		}
-
-		returnSVGResponse(c, svg)
-	})
-
-	// --- random album --- //
-	for i := range 5 {
-		router.GET(fmt.Sprintf("/random-album-%v.svg", i+1), func(c *gin.Context) {
-			randomAlbum, err := getRandomAlbum()
-			if err != nil {
-				slog.Error("Failed to get random album", slog.Any("error", err))
-				c.String(http.StatusInternalServerError, "Error fetching random album data")
-				return
-			}
-
-			svg, err := generateRandomAlbumWidgetBase64(randomAlbum)
-			if err != nil {
-				slog.Error("Failed to generate random album widget", slog.Any("error", err))
-				c.String(http.StatusInternalServerError, "Error generating widget")
-				return
-			}
-
-			returnSVGResponse(c, svg)
-		})
-	}
-
-	if err := router.Run(listenAddress); err != nil {
-		slog.Error("Gin app error", slog.Any("error", err))
+	if err := newApp(logger).Listen(listenAddress, fiber.ListenConfig{DisableStartupMessage: true}); err != nil {
+		slog.Error("Fiber app error", slog.Any("error", err))
 		os.Exit(1)
 	}
 }
