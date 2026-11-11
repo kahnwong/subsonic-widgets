@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        width="540"
+        height="64"
+        viewBox="0 0 540 64"
+        data-reactroot=""
+><foreignObject width="540" height="64"><div
+        xmlns="http://www.w3.org/1999/xhtml"
+><style>
+    * {
+    margin: 0;
+    box-sizing: border-box;
+    }
+    :root {
+    color: rgb(36, 41, 46);
+    background: #FFF;
+    }
+
+    @media (prefers-color-scheme: dark) {
+    :root {
+    color: rgb(201, 209, 217);
+    background: rgb(13, 17, 23);
+    }
+
+    p {
+    color: inherit !important;
+    }
+    }
+</style><style>
+    .paused {
+    animation-play-state: paused !important;
+    background: #e1e4e8 !important;
+    }
+
+    img:not([src]) {
+    content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+    background: #FFF;
+    border: 1px solid #e1e4e8;
+    }
+
+    img {
+    border-radius: 3px;
+    }
+
+    p {
+    display: block;
+    opacity: 0;
+    }
+
+
+    #progress {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform-origin: left center;
+    background-color: #24292e;
+    animation: progress 273333ms linear;
+    animation-delay: -1321ms;
+    }
+
+
+    #track,
+    #artist,
+    #cover {
+    opacity: 0;
+    animation: appear 300ms ease-out forwards;
+    }
+
+    #track {
+    animation-delay: 400ms;
+    }
+    #artist {
+    animation-delay: 500ms;
+    }
+
+
+    #cover {
+    animation-name: cover-appear;
+    animation-delay: 300ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    #cover:not([src]) {
+    box-shadow: none;
+    }
+
+    @keyframes cover-appear {
+    from {
+    opacity: 0;
+    transform: scale(0.8);
+    }
+    to {
+    opacity: 1;
+    transform: scale(1);
+    }
+    }
+
+    @keyframes appear {
+    from {
+    opacity: 0;
+    transform: translateX(-8px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    }
+
+    @keyframes progress {
+    from {
+    transform: scaleX(0)
+    }
+    to {
+    transform: scaleX(1)
+    }
+    }
+</style>
+
+    <div
+            class="disabled"
+            style="display:flex;align-items:center;padding-top:8px;padding-left:4px"
+    ><p
+            style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
+    >▶</p><img
+            id="cover"
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APQmkRVJZ1AHUk1BqPiTw5piMbi/ttyRcqGLfP8AhXkniHUZtW0Se0luiqTBTtXrwc/zrz9bK/hu3tnnm3ou5cZyOe47VjKSa3NILyPon/hLtIutKvLzTo4bqS2topGjVmHzM+0jHXA4Ofel8Q3aWXiPQYkUpHcX72siKTtcfJgn/vo14Lp+oapZXG5JHV87PNVirKO6t6qe9ev+Itfs77WPCV79ptlVb7fMiyD91kxklsfiMn0rPmfc0lFI6uBNMtHuZJohv8n7RKMsTt8x0LAZ7YWsSXU7aO1Nwz/ID+NWdRv9G0/UYb28ug0iWzQFYXDq0cjSFs44P8B615G+tTpZvbTuCvVSnfA65qoztuROPYzNC0dBbnUru8dkD4t1DZDAD7x/z2puoPDY34uICzbkIc54P4+tYc9ze3dvBDvcQKmIY0IUYz39c8811EfgTUfJv31Ffs62jJFKY5EfBfbgZB5PzL+dDjreTGm3sjButanuGEhRFVUVlGcHr3PeustLGzvY7y5jmysVqJYyeu/Kgjn0yfyrF1HwdcQ3tzp9tIss9tCzTI0iDYkfLHdnHFb+j6VqC2F4kNkpWOyWadi6jbHIu9T15JAzjrilJxsrDSk9zA1F7uAyN9td1IHlAn7xxkj9aw49RmdXjeHfu5JJ5J7Yrqbrwj4l85YJNKJaGz+1tiZDvTJBI56+3WuSsgiS7jIkbEfKHP3vqKNLFLsZkcrpKjgnKEEc+le2XninRBpeuxvqUG+8ureWLrllXyMkf98t+VeOppwa3jn+3Wal/wCAyHcv1GKW/t1tggFzBOT3hfcB9a1lG7RlCVkz0Vtbs4vGPiG9kntpIJ7e7W3KElJN/KAd8nP51tWmu6Tp0mvI+pW8a3ejWq2w+Y5dbdoiuMfeDFePQ5rydLgNGpPc5zT7t3ltBl2AXaM+xzmsUrOzNpbXR7hP4v8AD893IyatbODpRhDYYEy7ifLxjrjtXhVijC7tTDbN5hcdsggcE806ztri9njZZQwDbSzNjb7n/GupDW9tAUe6s/uBcJJluvTp75qnLk0iRyuSuz//2Q=="
+            width="48"
+            height="48"
+    /><div
+            style="display:flex;flex:1;flex-direction:column;margin-top:-4px;margin-left:8px"
+    ><p
+            style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
+            id="track"
+    ><tspan template-id="title">After Us, The Flood - Single</tspan></p><p
+            style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
+            id="artist"
+    ><tspan template-id="artist">Charlotte Wessels</tspan></p><div
+            class="a"
+    /></div></div></div></foreignObject>
+</svg>

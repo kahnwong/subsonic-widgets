@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        width="540"
+        height="64"
+        viewBox="0 0 540 64"
+        data-reactroot=""
+><foreignObject width="540" height="64"><div
+        xmlns="http://www.w3.org/1999/xhtml"
+><style>
+    * {
+    margin: 0;
+    box-sizing: border-box;
+    }
+    :root {
+    color: rgb(36, 41, 46);
+    background: #FFF;
+    }
+
+    @media (prefers-color-scheme: dark) {
+    :root {
+    color: rgb(201, 209, 217);
+    background: rgb(13, 17, 23);
+    }
+
+    p {
+    color: inherit !important;
+    }
+    }
+</style><style>
+    .paused {
+    animation-play-state: paused !important;
+    background: #e1e4e8 !important;
+    }
+
+    img:not([src]) {
+    content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+    background: #FFF;
+    border: 1px solid #e1e4e8;
+    }
+
+    img {
+    border-radius: 3px;
+    }
+
+    p {
+    display: block;
+    opacity: 0;
+    }
+
+
+    #progress {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform-origin: left center;
+    background-color: #24292e;
+    animation: progress 273333ms linear;
+    animation-delay: -1321ms;
+    }
+
+
+    #track,
+    #artist,
+    #cover {
+    opacity: 0;
+    animation: appear 300ms ease-out forwards;
+    }
+
+    #track {
+    animation-delay: 400ms;
+    }
+    #artist {
+    animation-delay: 500ms;
+    }
+
+
+    #cover {
+    animation-name: cover-appear;
+    animation-delay: 300ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    #cover:not([src]) {
+    box-shadow: none;
+    }
+
+    @keyframes cover-appear {
+    from {
+    opacity: 0;
+    transform: scale(0.8);
+    }
+    to {
+    opacity: 1;
+    transform: scale(1);
+    }
+    }
+
+    @keyframes appear {
+    from {
+    opacity: 0;
+    transform: translateX(-8px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    }
+
+    @keyframes progress {
+    from {
+    transform: scaleX(0)
+    }
+    to {
+    transform: scaleX(1)
+    }
+    }
+</style>
+
+    <div
+            class="disabled"
+            style="display:flex;align-items:center;padding-top:8px;padding-left:4px"
+    ><p
+            style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
+    >▶</p><img
+            id="cover"
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APR41CR5I44HA96dd38enx7pRkswEaoMlj3qWNl5TuBzx0rhPEWswX1xcWMci3GfkWFXxtZc8g9jn868qc+VHdSp87u1otztV8TWn2fdERIduQAcZ/HpmpI9ftJrSGV2aPzl3oHXBIryeewu5NPSKE3IeEAbYgAOQuVx1J6kn/69XIdXube2h05bV2jwwfehCKMHaA3T3IqfaT5brUzcUptPY9Bs9ZtdUnmjjyrx7SUYc85wf0PHtSXMQ+b5enFcHoGr6do2rJbApvvpRGyREswY4AyCTnrwc9M/SvQd+4eU4IlC5PcfnVJtrU1qwSd4qyZS1rWBYRokJJnc7U+QsPccdK861Aw/25JfSWCxPJIOVY7QQuGB9yT1xn0roxqOgeIruDUDfsqqgBgJChjzgk9c8/pXGX9nJbzXUs6o/wC8JXEm4FOxyeeOKiUZXfMVQ5OeN9jstO1G1vLixgg2KEuzHczBI9gOwN6fh9TWNrXiOy+1XegwozgcQ3EqALkKCTkDr6EUzw3bC1FlFaOQs18ZZrdW4ZTH3Hdc+tZ15NdXL3t3KJo1hQtFDLwpbHO0euM4rqcY+zSS1J5qixTu9L/KxS8OX1reX6vf7hJaybvNMSszL2BJ5zwB2FemeHrxru+nkFxG8DgiKJVYvFzwDjgAgcZ5rx/QbW+kgv54SUjNu2zMYYOxPHf2Nek3fiTRvCGivNbxRPfPEgaOM43sODnnoOelZShLm0M3KN3dnkWjanDawkSRpICOQ46e4rqo9StLyKK3W3HklSD5ZyXbtj06YxXmkNyUXb0HtWja6jLAuIpgpZx8ueD7/wD1/at6lHmMoVXFNdzrYYdZtLlk0yYpHvypIXeGzg49OmPwqhqkusywsl5s8l3BI8tVORyOmDjmrWh6wZb63hldBtO/dvGQvoeOv40/WtRdb2dQm+AruVVbbxn+ffFZqUlLlNHJuN7i2ptoBbjazQqh8wb87mOCNoxgd/rWR4iudNlb/Rg6OFI2MBx7ZqreazPMP3zKzJ8inPQYx27Y71hTTFx/hWlOk73ZjKVz/9k="
+            width="48"
+            height="48"
+    /><div
+            style="display:flex;flex:1;flex-direction:column;margin-top:-4px;margin-left:8px"
+    ><p
+            style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
+            id="track"
+    ><tspan template-id="title">Forbidden Fruit - 1st piece -</tspan></p><p
+            style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
+            id="artist"
+    ><tspan template-id="artist">East of Eden</tspan></p><div
+            class="a"
+    /></div></div></div></foreignObject>
+</svg>
