@@ -1,0 +1,59 @@
+name: Generate widgets
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: generate-widgets
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Test
+        run: go test ./...
+      - name: Generate SVG
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          TOKEN: ${{ secrets.TOKEN }}
+          SALT: ${{ secrets.SALT }}
+          SUBSONIC_API_ENDPOINT: ${{ secrets.SUBSONIC_API_ENDPOINT }}
+        run: |
+          go run .
+      - name: Publish SVG to generate branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          publish="$RUNNER_TEMP/stats-publish"
+          if git ls-remote --exit-code --heads origin generate >/dev/null; then
+            git fetch origin generate
+            git worktree add -b generate "$publish" FETCH_HEAD
+          else
+            git worktree add --detach "$publish" HEAD
+            git -C "$publish" checkout --orphan generate
+            git -C "$publish" rm -rf .
+          fi
+          mkdir -p "$publish/data"
+          cp data/stats.svg "$publish/data/stats.svg"
+          git -C "$publish" config user.name 'github-actions[bot]'
+          git -C "$publish" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$publish" add -f data/stats.svg
+          if [ -f data/wakatime-stats.svg ]; then
+            cp data/wakatime-stats.svg "$publish/data/wakatime-stats.svg"
+            git -C "$publish" add -f data/wakatime-stats.svg
+          fi
+          if git -C "$publish" diff --cached --quiet; then
+            echo 'SVG unchanged; nothing to publish.'
+            exit 0
+          fi
+          git -C "$publish" commit -m 'Update language stats SVG'
+          git -C "$publish" push origin HEAD:generate

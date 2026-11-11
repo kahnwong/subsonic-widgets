@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"embed"
 	"encoding/base64"
+	"fmt"
 	"strings"
 	"text/template"
 )
@@ -68,6 +69,9 @@ func generateNowPlayingWidgetBase64(nowPlaying NowPlaying) (string, error) {
 }
 
 func generateRandomAlbumWidgetBase64(randomAlbum RandomAlbum) (string, error) {
+	if len(randomAlbum.SubsonicResponse.AlbumList.Album) == 0 {
+		return "", fmt.Errorf("no random albums returned")
+	}
 	album := randomAlbum.SubsonicResponse.AlbumList.Album[0]
 
 	coverBase64, err := getCoverBase64(album.CoverArt)

@@ -132,6 +132,30 @@ func main() {
 		os.Exit(1)
 	}
 
+	if err := run(os.Args[1:], logger); err != nil {
+		slog.Error("Command failed", slog.Any("error", err))
+		os.Exit(1)
+	}
+}
+
+func run(args []string, logger *slog.Logger) error {
+	if len(args) > 1 || (len(args) == 1 && args[0] != "server") {
+		return fmt.Errorf("usage: subsonic-widgets [server]")
+	}
+
+	var err error
+	authParams, err = query.Values(authValues)
+	if err != nil {
+		return fmt.Errorf("create auth parameters: %w", err)
+	}
+
+	if len(args) == 0 {
+		return generateWidgets("data")
+	}
+	return runServer(logger)
+}
+
+func runServer(logger *slog.Logger) error {
 	listenAddress := ""
 	switch mode {
 	case "production":
@@ -139,18 +163,8 @@ func main() {
 	case "development":
 		listenAddress = "localhost:3000"
 	default:
-		slog.Error("Listen address is not set")
-		os.Exit(1)
+		return fmt.Errorf("listen address is not set: MODE must be production or development")
 	}
 
-	authParams, err = query.Values(authValues)
-	if err != nil {
-		slog.Error("Failed to create auth parameters", slog.Any("error", err))
-		os.Exit(1)
-	}
-
-	if err := newApp(logger).Listen(listenAddress, fiber.ListenConfig{DisableStartupMessage: true}); err != nil {
-		slog.Error("Fiber app error", slog.Any("error", err))
-		os.Exit(1)
-	}
+	return newApp(logger).Listen(listenAddress, fiber.ListenConfig{DisableStartupMessage: true})
 }
