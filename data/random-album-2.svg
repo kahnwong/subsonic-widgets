@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APUWvBgc9qrSXoHeufbUshcN/CKge/znmua5rY2bu/Un5Mge5qDWdRVra2htZmMIi3MOnzEnINYT3PmHAJLdgO9ZzXfnwOA23b0IPJFS2UkXNP1i7s9YgkglKkSDcueGGeQaw/G9u2neLL6BofKjdy8YDAgq3II/wpkmpLaXP2tAJfJYEI4+Untmud1zWr3V7976+m82d8AtgDgcAACmmDR0EWqleM5FT/2oh43Yz61yEV03c1dsEa/vEti20y5UMTgAkcfrihoRtwastwsyJH8+PvFuCPSqD3Z+0ZjYYC4PoalNnZ2rxwrKXa6JNq+7G1NvylserHH/AAE1FFb2kl0wdmjj8gT7g2SACFcfnux9BUM0RHNeMi7kwNpyQRkN7Ed6z557WVldVEWTh1OSBnuOvHtUmtmCzu5rWKUuY8q5yD82TwMegwPrmsZZg8TIzhcDr/SldjKaXzMAQa3Le4jWyLPEXYjOQ+OK41J/LIUcit60nLxKB1xWszOJca8t88wE47iU/wCFRS3Vuyk/Zmz6+aeP0qndSiNT8gBJxWfJccfjWSjc1NO5uISg8uIoe5L7s/pWc05B4PPWo5LncuKq+ad4z0PX6VpGAj//2Q=="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APb9duJLTw9qdzC5SWK0lkRh2YISDXgieIPHrwRSjxNKvmBTh0UYyu4c4PpXunihS/hfUkBI3QMpx6Hg/pXhw8MaYQA9quNowMHg/nSY02tgTXvHskwRfEs4BxhmhQdSR0xntTF8RePjb+c3iho1Ay5kjUBRgnPCn0pz+GtOWQ/6IrcDJG7PXGOtObwppoBH2RPLC5HJ9/ekPmZA3iT4gJbNJJ4jlDKhfYsaN0Geu3HTGPWvePC11Pe+E9Iu7qQy3E1nFJI5AyzFQSeK8GXwvZkNttYApH3cN0wOvzV7v4Uj8nwrpkWThIFQZ7AcAflimgbbJvEC7vD98P8Api1eT+W4JGSBXreuf8gK+/64t/KvLGuYhcBNn4gcUMkjWNvXJ6dKUxNzkEn3H4UsnJdlYAAnjNTarq8GmNDG9uJJTGrgk4Az0/lSAi+zNuAdHA6NgdK9S0AY0CxH/TFa8nttelutVihJSPnYwHRhmvWdC/5ANj/1xX+VNDF1vjQr8+kD/wAjXkCWsiyASpGELvuYF+W5MfGOOTyM817HqsMlzpF5BEu6SSF1UepIOK8jk+HmryXv2jybgEzGVhtTuScD952BH60MCrbR3cUcYaaERCQNLtDEgjpyR1xnj2qhfaZcXdzNL5yYMgABJyOTweOvtWjF8MdXieNgs52srEbEAOPo/Xk01vhdq/8AAs3J53Inpj+/1oAzE0W6GoRzBxvjuFcrtwVwSSox3xXuegnOgWB/6YJ/KvK7b4darb3EcvlTuIpjKgITk5U8/P14r1jSIJLXR7OCVdskcSqw9CBQgZ//2Q=="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">WWW (Repackage Edition)</tspan></p><p
+    ><tspan template-id="title">Remember</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">김재중</tspan></p><div
+    ><tspan template-id="artist">BIGBANG</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
