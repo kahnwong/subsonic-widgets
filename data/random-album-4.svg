@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAC8AMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APKLnTWcfuo3ZwAw4OSv0/rWz4Y0u3lVxLKokdSXjZcGPBwCM8NnnPIrf0TXLvSrqN7WGNWjGR5qb8DHbocc+tWNW1A6ndpqOLN2ZiJBHD5YPbqCQ3r0zWTTatFnXPlcr2sZM3h622IRegsxIwFGBzx36VnLosc0n7yfA2ElQMEEdvx9auPO8SzbMsFGCM889s9u/NSSTWGo6bbmKJku/KAmIfcrnJAcd+3SsuWfRkPl2MbVdPtbBpRDKZVUnYTjO0EjJHY5FYglVwN/BrUvLThpUlDK5ChT1rOe0lSU742VQcH2rSGi1ZEl2OrmNzFPFp6rItwy5BibHHv7Yz+lUriW50yUwxho40GflOQSRz/kUyLV/tt1ukOHXkN+GOfaqlyZnDHcDk5G37o/zzWUU07M3k01dGhLqlvc2ZW7Roo5F+Z4Rgn2wOv44FZMd+be48yFHWNUMaqx5xnPJFMQsyMhAIHP/wCqk8xnfaygAAYwOP8APWtSOXS4/wC1NLGzKNu0glc5H1q9FLFc2pZyPNxgkms6zuktTcxtGrs64QsOARzUHmbxuQbSTytDjcjmSFtWCSbgOenBrQaG6EcwaGRR0IZCPxNYsblmyuN45wehrXfXdRuYjDNeTFCu0oTlcYxjHpRNSvoVFxtqQRo8DIZVZVIHIBGR9DUU4EjHAIOetXIdR1GRtpuO23kA8AY/lT59T1AowM5wSSSABk0ryuPSxnx2Vxs83yZSh6NsODSOUEYSMfMT8x/pWpHrGprbALdERkbQgAwB6YrJdQj57GnFt7kSSS0P/9k="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APAKKfFE88ojjUsx6AU1gVYqeooASge4oAycU5kZDhlIOM80ANoopxjcdRQBa0uURX6MTjgil1OVJbnckYUeo71TU7WBxnB6VPNcmc7dqomeAB0poXUr0pYtjJzjpWvDo0Mltva52OwyoI4/Gsy4hMEpTcGA705QcdxhbxPNMqopOT2rYm0eeO5iBHBwcZ7UeFBEdVHnZ2gdB0P1rW8WXlvDqNvJZSkFEIZO2a55SfPyo1ily3OMooorYyLUdwFjAaV8/wCfamSGJlYh2LH1qCindgSwXElu++NsGkmmkuJTJIxZj3qOipsr3Hfof//Z"
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Lionheart</tspan></p><p
+    ><tspan template-id="title">Movements (Remastered) (Reissued-2018)</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Serenity</tspan></p><div
+    ><tspan template-id="artist">Solar Fields</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
