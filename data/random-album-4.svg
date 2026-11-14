@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APAKKfFE88ojjUsx6AU1gVYqeooASge4oAycU5kZDhlIOM80ANoopxjcdRQBa0uURX6MTjgil1OVJbnckYUeo71TU7WBxnB6VPNcmc7dqomeAB0poXUr0pYtjJzjpWvDo0Mltva52OwyoI4/Gsy4hMEpTcGA705QcdxhbxPNMqopOT2rYm0eeO5iBHBwcZ7UeFBEdVHnZ2gdB0P1rW8WXlvDqNvJZSkFEIZO2a55SfPyo1ily3OMooorYyLUdwFjAaV8/wCfamSGJlYh2LH1qCindgSwXElu++NsGkmmkuJTJIxZj3qOipsr3Hfof//Z"
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOQb4XW+fl1aXA4yYR+PepB8KrYjnVpgf+uI/wAa6e5mN1ciC3nKRxKd4jYq3HTt061sQAiFQzFj3J6muRzkb2R56vwsgLsp1SYYxj90Of1pz/CqDHyatJu7Boh/jXoE0sVvDJPM4SONSzu3QAd686uvHusXlzK+lWMYs40ZwZFyxUfxkZ6U1KTCyFj+FinmTUpB7LGD/WpD8K7fPGrTYx3hH+Na3hex1xLq8vdTnb5jjyG6McA7gewHSujN4fLyYyreh9KTlJdQsjz6x8WPBYtmQGdgQd4JLe4/z2rorHxppzWxNzKwk3H5Vhfp+Vcro/jXTtLs4IptFhv5VjZWe42jbk9F+U8DqPcmr0nxE0xp4pI/C+nqEZyVIU5DFTj7vYAgfWtXTTJ5mbet6tput6Fd2Ed20bSpgOY24IIIzx04rzXTrG8SQTRXPkOJRDhs52nrx3HtXU6j4503ULHyItFis2Ugkwsv74cfK52g4GMj3rCfXoTIzG2Xk5AyOOnt7UKPLoh3ud7pOtpbQx2zvJcwtljcvuBGe2Dnv0wadrV9bX4t4klcR7yxCfKzMASBkjjvXCweJYYZ/NNnGQARtzxyMent/Oi68UCeF4o7SCIMfvYy2OR/I4zU8nULnKZNGTSUVoSLmjcaSigBdx9aMn1pKKAP/9k="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Movements (Remastered) (Reissued-2018)</tspan></p><p
+    ><tspan template-id="title">Meteora</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Solar Fields</tspan></p><div
+    ><tspan template-id="artist">Linkin Park</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>

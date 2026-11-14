@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOC0/wAU2KkC4tZk90Ib/CvU/AkthrJlubQNIkRCnemMN1714HFtDDcwUZ5Pp717tpviXw74N8EWo0W5h1S7uJBFDFG2Glmb+8Oqj6+wrKVGCs1uaRmyp8UNXv4ZjpmjRoHhhV7yYxhyA52rGMggdcn6ivHL3RL2yVJJVwrDOQele36f4O1uUXGoX15A91qWVvLeQZUZ/ukc8cYx0wOtcR4x8Fz+F0ZVvmuoriMhS42nfnJH9acZDlG6Mnwzqa2Si3v7oRwEHAkPCn2q9qOs6OM7LkyH/YQmuFnRwQJCQQM59RU0mNoo+rxm+Zk87WhUU7j83SpbeeSO+iuIHVJYmDRsexByKrZ4xUi42ge9akH0X4H1n/hJNNmnM0u8sBIrHIifA3BfbPIPv7VzHxa1+w/s+LTIZBPdCT5mByE47n15HFcZ4K8OeINYMzaffXNhp7nE06uVEnsMdT/Kt34mpoGlWNjpFnbA3yLu3bjmNPVvVmPr/hWFveSRvze7dnmbyk5VWLEnnjqfapnyqgHqBVcSMjhl6jjmnGcufmAB9q6YtJHOWLXThdeTtlKb0ZnZgAF+baO/c4rv/h94CsNXiTUtSd5VRmU2pGFDKcfMc8jPbiuBjuIBZ+WSN4TjK8Zz+vU10nhfxcuh3jr57fZJ8LKHU5BGfnGO54z9TWc720Kha+p7XdXlho+nvLKyQQwRltigAKq9cD+lfPuqPJres3N7NM/2id1lbK/KquQFAOewIH4GtXxH41bWpZoF3LaHaAcfM/PP4dawWvYzbGJpFOMlFQHaOuMZ6H/PrU042V2XUkm7IbBpbXAQCXEjlNqbeuWYH8cKT71G1jtgLhmZ1TzDgDbtz9c/p7VJ9tDP5jzhmJUlmyWGB2PrnNNku0aykhWQ4Yhgp6DOcj8OOa0Mj//Z"
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AKEZGBgjFJLbxSx/Ou4gcc1ni4KYGc89BU4vlxn8x6V5UYzi7xPorxejMm88OIuZ7cKsx/5ZjoR/Q1DFp4uE8t4xkdiP0roEnjZlYPn05qpeyrDcCReA/DfX1roliazVupEaUF6HN6hoRgT7XZgsi8vEeSPpUMPlzRZGCD7V08cwSZx/CcMPxrm9TgXT9S/dDFvcfMoH8LdxXThsXOr+7m9d0/0JlTjTfMtupbknJxKjHjjFPhnBcgMTwefwqKZVwrMuOdxGamTycE4HtgVDqR5TBQlzCea6MrRsBkA1NcXAubMsx+bb0zUIjV3AIGwDs1JcrDHazNjnacc05VIu3cpQkr9iJLiRQGQlgoxjrkVV1efz7FHOMpICMdqbAV27Q7D3zVfVQq264ZsuwGDTpKKqrvcJyfs2zVmmiwMgcjrVX7dtYIBkYwPes8SuyAHkDPPrTDI0a8HB7/SlCklozKddt3Wh0SKqpw23IzgKazL1mcmMOx5yRtNVWv8AzEwhOe4znFV955JYlu5pRjyvUc6nMrRJhIY854I7Gqs8r3Myk/dXoKc+T3qONceuAf0raDS97qZNt6dD/9k="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Ready For Love</tspan></p><p
+    ><tspan template-id="title">Studio Jupiter Live Session</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Tata Young</tspan></p><div
+    ><tspan template-id="artist">Solar Fields</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
