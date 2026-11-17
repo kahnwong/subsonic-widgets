@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APAcU5U3HgZ+gpta/h3WrnQtUW6tXiVnXynaVN6hSRnj8KAM+O3eV1RIyWYgDjv0p9xaSWtxLBNHtkico4BBAI4PI4PSvSo/iFOiBI9U0+NMlsC0fgszE9ufvsfSj/hOZB/zHbEthsN9jOOTkjbtwc+pBP5nIB5e0e04K4PoRUZGK2vEmu3fiDV5Ly8kikdcorRJtUrkkHB57n+XHSsY80APhgluJRHEhdz0Udac0TRyFHGGHUVLp109lfRXMZ+aM7sEdfUVf1f7Pc3rXdnCsFvIBsi3bmHY5Pr+lAGaFpUieWVYo1y7HAFdjrMmpaf4N0a0lLm2uI3lMEsUfy4YEMrAbhx79653Q7y1s/EVjc3U0kVtHOGeRE3ED129/pQBQubWe0neC4iaKZDhkcYIqF4njClkZQwypIxke1auuX66p4gvbxJTLHLMSjlNpZc4Bx24p/iLVf7RmtYoiDa2sCxQkptO3ryPXOf50AZ+m3S2l5HObaGdUBDRzDKMCMc1ry39rdpmSxtbXZGzJJbhgSR0XBYjHNc5mpo3HlyB5MEL8gIznkce1AGpPrd3e28MN/K9xHBD5MAY48pfw6/j7VJrn2eDQ9DtIuZvJkuJmx3d/lH/AHyoP41iM26M/Wp7y+e++z+YijyIFhG3uF6E0AdV4ZttJl0rSjqEEbh9XaKYn5S0ZiHBYcgAnP41zOqWctjqFxbyxlDHK6Y7cHtUkepXM4tLYsqwwE+WiIFGT1Jx1JwOTWh4m1i21RLURwFbpFH2iVursAFyPqACfegD/9k="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APAaMetAGaeF/CgDRttA1G80h9TtrdpbdbgWxCctvKlunpipLnwxqdnoSavcxpDbyOUVJH2yMVYq2FPJweD6ZFamjeNr/RbC3sILSye1iLmRXgUtKWIJJbGQcKBkdqfr3ja41uHUYjYQQJeNGSFYlUC88KeNxYk7gAfmYdDQByHf2opxFIR6/jmgCWS2eIB+GjJwsi8g/wD16I1LsqqpZicADqTRDcSQE+W2FbhlIyGHuO9W/wC0XMKxxQW8GOrxR4c/8C6/ligCSGwnV97RxsqcspcHGPUA5xVnxDPbX12l9aadb6fG6BHt7cnaHUcnBJxnjpx1qlYSxR3KibARjhn2ltoPU4707ULpZpTHE4aBGOw7AmR64HTp0+tAFE0zNPP50zJz0oAQ9eKcDjvxUdOBoAk3YFG7tmpY7tERAbWBiowSwPzfXmka6VkZRbQjK7cgHI9/rQBCTnrTTyKM+1JmgD//2Q=="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Leichtes Gepäck - Live in Dresden</tspan></p><p
+    ><tspan template-id="title">Madách</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Silbermond</tspan></p><div
+    ><tspan template-id="artist">AWS</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>

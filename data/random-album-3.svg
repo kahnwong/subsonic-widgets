@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APenWUsSkqqOwKZ/rVfUL630uylvb68it7aIbnkkGABVyvLfjHcTl9A0/Yfs1zO+48YLjaFB+gZj+FAGNq3xd1W/1V4NBENtZKQqTXEBaWX1YLnCj0B5/lS2nxF8RwymX+0LW8Uf8u88Pll+vQgAj/JrsfD2gadptokUdhGpC/eC5yffufxq5qWg2WoWMoe3jOFyARyP/r1nOLk7p2GnYs+FvF1n4rtvNtnME6qDLayL8yZHUHuM/wD18V0QDg8uCPQLivHvhjpMVj4qnRHM6xrJggf6kg7cH3Ix9RXsdVB3QMK4H4s2pm8O6fcJGXlttRhkUg4AzlTn25rvqw/F+mf2t4XvbcECRU82MkZ+ZeR/KqEcHf3ev6Hbm4+3ug3okEKqjK4ZgDkbcgYPrn69atXD65qHiHUo4dRdUtptnkgKBt2jr8pJzz39KyLvVJNUg0lLWWFGXbK7zqNsYzgZzx6/pWjHf3X2m91WSa1mkuIwreUoCrxwCASc/WpAs/Cm3xfeJLp0KySXSr7ADP65/pXpdcj4Ksp9O8KxzxRpJcXspnIZiAN3TJ+grqLSS4ls4ZLqBYLhkBkiV94Ru4DYGfrVATUdetFFAHkbvbeF9f1SzmjzpRnOx1+YwMVDBT6DJOPTFMvbqLWbM2enGeS3ihae6uWBLKoPQHGNxxgfnXf2XhgWGrX17Fcs4vJDJIrqM5PbPcVY1HRP7Rs5bWRkRJAVLIgDY9M0gJNNVYPDFj5LhlitY2Rs8NhR/OtSqFhpi2On2tiJWeC2jWNQ3JbaOCT3q/TA/9k="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APn+iigdaYHZeEPAV54p0u9voXhSO23A72IOQu7gAVyUlu8Yyele2/CKPUF8MaoljFBJE0pSV5SRtBj6jFeR3QVt6xg7U4yx61nGTcmjacEopmTRQRg0VoYgAScAZNOMbgElGAHfFCOY2yACfcU97h3QqQuD6CgD1j4P699nttQ0rzlSa74TefvfKQce/SvN78tbvNG2N24g4GMdq7H4UafY61LrGlX0e7zYUliYNtZGUnlT2PzVyniqyGl+IL2wViywzMgYnJOPeso2U2jeTbpJmMEdl3BWK9M4pGRkOGUqfQipEneNQFxkdDjkUx3LkcAADAA7VqYDaKKKAO6+FKMfF6MG2qqMX9xg8fmRWH40yfGOqtnINy5H0ya1Ph7dmy1S5kRWaUw7ECjJJJFZ/i6MjWLln/1olO/8eaz/AOXnyNrfuvmc7RRRWhif/9k="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Amour Platinium</tspan></p><p
+    ><tspan template-id="title">8</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Rod Janois</tspan></p><div
+    ><tspan template-id="artist">Сергей Лазарев</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>

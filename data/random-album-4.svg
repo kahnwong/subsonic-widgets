@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APn+nRxvNKkUalnchVUdST2ptd/8MNCt77V1uppJReBgunRxrnfN6kkEADrz7+lAEejfDaTVZ7m2k1D7NdWw+eN4Sctz8oOfbr70mq/DiTT/ACIYb6Se8nRmjt/szBuMcdT6nntj3FfQYubTwzpbxiVLYh0aW9EYZ5pGJwEXOAAAck8AfWrN5dw+IbK7SIqzW+Ra3pACMQdrMpyeATg9iDQB8dEFWKsCCDgg9qSu0+IGjwW2of2jaeYVmbbc7lwFm79ABz1OO/1ri6ACvT/hNq8do1zFMYENvLHcRyuQHHOCikjkH0BFeYV0fga+Sx8V2hkQukxMRXaGySPl4PHXFAH02lrpuqWrW0t/bXEHlLC9vJtjLANuGCo+XjAwBgjsKls4tOtDJdIlgJBBlYDL8keQN46/MSFXnA4VQAK8h1F5IF+z22VXafNSRwoUnGOc8E5HJwM461c0S+WbbpqRm5kkDIifaQQQADuYgAZO0YOOhJ6CgDlvixeOb+3t5LeCG4mL3MxQ5dssdu70+nOK83roPG11Jd+L9Q8yTzGik8ncG3ZK8HnvznmufoAKkgla3njmQ4eNg6n3BzTEClgGYqvcgZqwkVq337ll+cD/AFWfl7nr+lAHsypp2vX8VzBMJQ0UUxmkEgYNjkBlGAwyOo5wOeKq2t6NOOoXmoT3NtcW8DmDLNmULnC7yOcgHsO+MZrz2z8RX+mQ+TY69PDGIyuEiweNxVc+mT+GabfeI7/UrV4bzXbqZMsgSSLOU4IJOe57dsd6AMGWR5pXlkO53Ysx9SetMq1NDZoyiK7eQEnJMOMcnHf0Cn8faqzhQxCsWXsSMUAf/9k="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APIoYkaCXdG7MfusBwuP8amENtJIoEU+13GwBhkrkD+jfpUMFu9xKI48biCeTjoM01QO65rYROltB96RZMBtxC9Ng4P64poht1yjxSM8cbbwGx82eD9MVLHdeXGiC3hJXjLLnPJP9f0pGlDxunkRDcc7gOV+ntRZiuMFrCQGaGQLgdD6A7/1x+FQz2iRw7grhw+DnpgjI/H/ABp+ziklheNVLDG7kDvVWFcsRqYpFkjbDqcqR61cl0q9mjF0ljLskYgBF4z/AEH1rNlYgkKT7e1MF5drH5XnSNGTkruODQVFLqdFB4XuZEV2dApxkxndt/z7ZrdXwrYW1oGDi5c8+YWIH5VxsWrXgURpMy8YA9BUgubtl+e5lPsXNMJuNtEad3PZWBaO1gjkuT96VhlU9lHrWHMWlcu7EseSTUhBznNRtSM27l5oEk++oz64xUDWSDlTg+lWz9aPMIUIFXA7455ouTdlRYgOHAzUwcjGQHA7N/jT5JfMGGRBzngYpPPPXy4+ufu/hSC5BIQWOBtHpnNQPU7yHYV2rjIOcc1XfkUAf//Z"
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Viszlát Nyár - Single</tspan></p><p
+    ><tspan template-id="title">Rise Again - Single</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">AWS</tspan></p><div
+    ><tspan template-id="artist">Apocalyptica</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
