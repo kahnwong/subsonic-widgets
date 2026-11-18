@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APAaMetAGaeF/CgDRttA1G80h9TtrdpbdbgWxCctvKlunpipLnwxqdnoSavcxpDbyOUVJH2yMVYq2FPJweD6ZFamjeNr/RbC3sILSye1iLmRXgUtKWIJJbGQcKBkdqfr3ja41uHUYjYQQJeNGSFYlUC88KeNxYk7gAfmYdDQByHf2opxFIR6/jmgCWS2eIB+GjJwsi8g/wD16I1LsqqpZicADqTRDcSQE+W2FbhlIyGHuO9W/wC0XMKxxQW8GOrxR4c/8C6/ligCSGwnV97RxsqcspcHGPUA5xVnxDPbX12l9aadb6fG6BHt7cnaHUcnBJxnjpx1qlYSxR3KibARjhn2ltoPU4707ULpZpTHE4aBGOw7AmR64HTp0+tAFE0zNPP50zJz0oAQ9eKcDjvxUdOBoAk3YFG7tmpY7tERAbWBiowSwPzfXmka6VkZRbQjK7cgHI9/rQBCTnrTTyKM+1JmgD//2Q=="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AO4vRdm7by7qdMtn5ZDgfhVtI7t9pNzOcAYJc/Wotx8+XdwFzyfcGtfTpVuLO3bbksmD744rIsrRpOTj7RLkMR9/HOB7+9S2LSXilknuMK7IdzEcr1+v1qaB2YM8aZdJS2T+Ix/n0qPTL9JYofLjZVErIcqVy2MkYNMBbu1mjhdxPKNoLffNYt1ZXUp2C8nCMRkeYen8/wAsV0Osz+TpspA6kJ+Z/r0/GsxbpXktNq7hIOo6cJn/AD9KTA84uo7+4n1W2F/bvL5EWbdi5VcFP9rP6VveEor+08Laskl1BA0KhoxHuwm4nJ5PGfb61y1w8MEF5dh7/wC3Pbxq9urgkYKZwCMZ4/nXQ+F72G38O3o1I3ts1z8o+043lexGBx1P5UAURdalokbW7Wgcyt5n+iRysncDPB561emlvL/RtPa10+KyNvM0pmngkjAOBkqcDJGKqaNfG+ikkJvl2tgfaowCf93b1Fb2vTn+xdHtY5L1RPcMrG2iB2ggZLE9B3zTDQh8cpfXmlabHHPbz77ZJXWcMAW4+fC9/wDHrXnsUuoW2oadA+qLa+XNtWKJnCoCR935h6+ldn4/1/S7a0tAt5KJY1EOLeNXIHqQfpj8a4KFLK9msb+W/Y7SXaOSJQXwxxuH0x+GKANCW5eXxOXmb93I4JdOd30rrfGFxHdWVssO1FReXC/d9RXn/iPTNRtNfnWYNLLv6xg7cn0psUutTW4E0cpt4mAC7D19z7enrQB1102l2ul6WNSuJEZ4nZWzjHzdPyxV/T/Emi2uiyLpckkkjo+Wlz1AyMZ7Zz2ryXXLi51BY3l80rHkDg8DjiqdrPPZquJ5UJcdF6fjTtoLqdXrekX11dzTxR4BIPLYxx9K5maK9tZB5qsqlsK4ORkc4zWvJqOspBLBbvNch2DFpNzdeAB7VnNZatIqPc+aqBgy5jwoNAH/2Q=="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Madách</tspan></p><p
+    ><tspan template-id="title">Dark Adrenaline (Japanese Edition)</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">AWS</tspan></p><div
+    ><tspan template-id="artist">Lacuna Coil</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
