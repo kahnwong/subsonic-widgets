@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APGYbTasqywOXMYZD025IO4+2P51dW2iWSHFjI4FuxdFbl2wTv8AYdD+FSOZIoGmbc5ChPw7D6cUyynkaUPvufNVcK4PQHgD6dqde9ONur9R4Ok8RK/Qsw6NJhH+z+csTjIXINwCf4fpzTZdGjhZbZJBNNIQQ4PCnGSv1Ga2LHTdTvpRHZtObwSLFGSp5LHsQa9DPwU1HTNPkNtqMM8ynzI9ychu4z78fkK8/wBpVld3Pd+p4ai4qaSv3PFX02REZgjlUbbIxXADelVpLCZfM/dN+7GX4+6OnP5iui1SO4t7+9tpoTBKSEliGQA4x8w9zz+ZqOXzlXc6KGeLZKB0f3PqQcH8BXfhnOpFrt/X+Z4uZU40Kia69C9JZyPpk3lQ+Y237uO1Z2nSLGI8sc85Rhncw6D/AD0rrLCOSW0kjgcJK6lUY/wk965K7VdN1VkuELeVMsjrjgkEZxnr3rrzWhZQktmjHIMRrOL3TufSPgTwzpHh6wtrp5zNevEFM0wwqk8sFOMde+SeK7i4nht4i80iovTLHGa5bSNC0+9t4NVgnnWOSJWEayHZjA6DoOK1NR0+LVY0t53cIY8oVPQ5/wAMV50PdjY7a8vaVG5O54741trOf4gieGPPn2mTlcZYNjOD7Vx2q2QjZuK9G8QWdlZ+KI7C2G82lqXeQtkhnbp+OM/SuM1vbuavdyynfCO/dngZxU/2uNn0Rm6VeCNl5rpZLXT9YiQXCR+YpyrlASOMf1ru7/wDpNr4bks9J0y1OoOmIZJ3+YsPV6m0HwtNo2go19bWUmoGZnYoPlC9gD7ColmEHScJxuVTy2oqqlGdiz4UvDp+ipZ26mbyE2pGx27uOgJzVo+Ibl2Ik0me0VEPzyyZwfRRjn60+0tflkMilHY7vcU64gJCyXE5lx90HoK8CUm22lZH0tOMIq0ld99f00PL7ySOHUr/AFBpmkuLtsuWPQDoB9K5HVb0SM3Ne4ReGdL1C1cXlpG7I/yv0Yj3rN8TeDPDd3pJJshA8SExta7Y3bA9Twfxr3aeYU40VCEbHzlfLasqznOfMz//2Q=="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AO8jMQ/1iuf904pwa3zykh5/vD/CoqK8K59HYlBgxgpIWPT5gM0DyTHkJJkjg7h/KmRqrPk9QKAwzwvU9qUXJt8y9BPQeTBjhJM+7D/CmyGIgeWrg99xzTW+8aSm2NIKKKcn3xSGIA275TjjnIpU3gMUIVtpwWGQDSLBHI7fIAOoIbOackcahtuM9D82e1aWRkpO5FGJlTE7qz5yNq4wPzNOpz4JyD6U2s2a3uOTbuG7pUiMgPQE/So1VSDucL+BNKQqqcSgnHTaapaEvUcJS7jd2GAAKaOWYetMBwQaXgv1wCevpSuOwlFSbI/+ew/75NNZVA+WQN+BFFh3P//Z"
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Drive</tspan></p><p
+    ><tspan template-id="title">C'est l'été, c'est l'été, c'est l'été - Single</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Anneke van Giersbergen</tspan></p><div
+    ><tspan template-id="artist">Félix Dyotte</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
