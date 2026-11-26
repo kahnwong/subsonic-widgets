@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APJYlZ5FVRzmpLgLbMY2GX7+1aGjQqkMl04GFOFJHerg8N/2mDPHciOWTDBHBwBkDrTqSjTScuoqcZVZNR6HNeYGOCMelIeuK1tV8N3mmzsj+XIF6lHB/SsqUYcjuKzjOMtYu5rKnKHxKxGetN6040hBFWZnqvhPw/HfeHI45VBWSQucDJ4rXg0iGPUX2XES+WeYw3KqBgDNT+GEMHg4yRkb4lYqV9f85rX0xLC5sw7SlbhgQ545rx8dWqOpY9LDKMIXRxGt6ZNE91I0efMQnPWvP4bI3NxtLbNzYzjOP88V7rLpg+y3yMWkjIJVj0zjmvFb+M2t26DgqTg1eXVnNtMMbaUU0Vf7LPmiMvg7sdO3r+fFVbi2SJmCOW2nGcYq01y+7dnn1/HNV5G3J04zXqnmnr3w6vI57WSxY/M3IPUfjXQRaOtjesfs5UE53bsiuK8J6lDoVunmoonlPQnqP8a6PWfFEV3ZxrGR5hGGGeAfb1rLE4CniHHW3oFPF1KSlpc6W71rT7XTHDPGxCkEDoT6V4fr2qWd/eO0GnRRcnJDNk/rTtQ1y48yRP4CehrBlkEj7xnJqo4eEGrdNBqrJxs1uI7L2QDNRk0MSeKXzQIfL2jrnd3rQR//2Q=="
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOdDaQyqGt7zfgbisox7/nWVqcyW0cjwgqGYiINyQO2ffFXFSsTXZQJ44SeFTdgepOKALvgf4fXHjjUL4G+Nrb2qK8su3exZicADI9Caz/FnhqfwlqhszMsu0b4pgMFh6kdjXWfDPXNQ0HTfEeo20KyW+2GNFfo87NtQZ9MMeK57xvrV1rOqH7bAY7mAtHI3leWGPcBST0oGS6ZdC/sUlP3x8rj3q0UNYPhe4xNNbsRhgCv1HX/PtXTbaBAorkNUl8/UbpyRsRtgP04rsNwRS7HAUZNcJcsXOAOJGLfmaYHpvh3+z4fhrYrf/aIYftouJHicgOysSNwIxgYHfPSuB8S6vJrus3eoHPlyys0SnsmMCqh1LUZ9P/sxb2c2BcuYN2FzQ6HfGnX5CAB9aQyC2mktrwTRAsyYJx3rtrK9ivrYSxEZ/iXuprlL2zk0K+Rt6TxyBXV0PBI6irmlx3A1M3EEJhhk52EnGKAN6+kSPT5yxGNhzXL6dp02s/aFtTumgjVgijJYFlT8AN2c+grsb7xcNMs7O0ksIrwJ2kPGMscjjryBznpVGw8Wwx6nc3n9mpLHe3auscz7vuqw2cDlcsMDHYUCJZPA8djA0j6xb+UgdhKIiUlVVLfKQeSQpOPpzVbT/B1xdGxuhfQIjxLIDLhVZjsYIp3cnDHnHVGHNX9Y8ZWn2WbTI9IW3LQ+V5kTqHXhevy+igfnVCLx3bultAdEgUoFXejKC5AUYb5T8pCAEdx35NAzrfiV4JH/AAj8Wt2EbC5V1EkKrhnBGNxUZ5zgetYFi6y2FvIBjKA4r3W5aO28PxzvGItqq7Mn8POc8e1eSx+JxdaAsJtQXmtYo2dmBwVXBYDHc8mgR//Z"
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Égésföld</tspan></p><p
+    ><tspan template-id="title">The Fame Monster (Deluxe Edition)</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">AWS</tspan></p><div
+    ><tspan template-id="artist">Lady Gaga</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
