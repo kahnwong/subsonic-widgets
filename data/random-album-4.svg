@@ -127,7 +127,7 @@
             style="width:16px;margin-right:16px;white-space:pre;font-size:16px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
     >▶</p><img
             id="cover"
-            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AOAtbdnxIOOO9aVvb4YJNGJD1bdkAggYwR+NZv2+ZpGMUO4Z4GKuDUDIVgNt5chByPWrubKxWlhF0DHCiKneRpAM84z7Cq/9j4kIjkXAbb8zAcdM59z27VDJLbI4Ub5MNkiPABPue9Ml2SEorPBIegk5H59qvm7k31Lv9mSQ77iRlxGuUUEZY5x+VZU8zvPuIGPSpVWa2dllUs4645/yKsCNWhMjIASOho5rm8VzI3dFiiLOsyhSnJYHGKoa7OjPI8GdrN5ascZx1P8ASobu+aZTHFhDnnHen29zc6fERGwkBIkeKRQwkXowxWdjFyurIXw9of8AasxaR/KtkPzvjqfQe9bXi62tY9ItisEETxyGNWjXBZcdz37VYtxIggTTYIzYP8yuko3Lnkgr1z2rm/GFzdPqUVrIjRxxxgohPr3pXbkc9mV7O4Atw7ruCN5bH2PI/rVW9kCybovuntSYezgSCUMkjN5jJ3AAwM/rUkEiTOdwXJ7GqSbO6DvCxK1uCiktiT9Kakkgn3I/3Bw1OklE8YJIUgUxHcqqpHweCavQ5kTv8kqO8EyEkHdFwM/T8R+dP1a8fUbwXKWb+YiKimTkcZ5x+f5U29vWSLau0kDnIqgt7OI2cMMMMYwB+X5mly6ldSCWWSZ2kmOZD1b1pEUxkHqTUTvlie3pQHOzn9aWxomkf//Z"
+            src="data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIADAAMAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APEFNSryagU1MhqWUiQDirthpl1qQxbWUk+Dhig7mqg9h9K73wLJdWxjW2aALNGx+fOQwzzx26Cok7K6NaceaVmcNqGnTabcGG4Ro5O6N1U1TZcCvSvGunSTw/a76WFbuGLLLDyrEsAOvI6n8q87dArEAH/CiMuZCqQ5XYgit55lLxQu6h1TKrkbmzgfU4P5VpJpREe+SR0XyvOGYW5T+99Mkc+9UrXUbm0i8uGTam8SYwPvAgg/+Oj9fU1aTW79oljM/wAgg+z4CjmPGNp4rQzRbl0uW3QtiRnXqjRFSow3J/75NXdJuBpGprDfQyLInKDHzDPOOox9apjXb+VZN90xDR+U2MDK/Nwf++2/yBWadQku9SN7ckfu1BCoAoOBgDAqLXLUuVpnQ+JdacxNC+HuLna7ZOfJQfdGf7x71zxcSDcvfr7VSkmeaZpJDlmOTT1bYwYfjTUbIUp8zuRCnKa2NJu9Ot5LRpo4PNR2MjXMJkjwQQMqOvb/ACKz9Qljm1G4lhWJY2clREhRPwU9B7VRABv3RJ9Ko7jzzwalZ8RkVAOQKEgbHE4xUoJIqI8ofSnRnI60xH//2Q=="
             width="48"
             height="48"
     /><div
@@ -135,10 +135,10 @@
     ><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:600"
             id="track"
-    ><tspan template-id="title">Decades: Live in Buenos Aires</tspan></p><p
+    ><tspan template-id="title">Αχ Καρδιά - Single</tspan></p><p
             style="white-space:pre;font-size:14px;line-height:1.5;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#24292e;font-weight:400"
             id="artist"
-    ><tspan template-id="artist">Nightwish</tspan></p><div
+    ><tspan template-id="artist">Γιώργος Λιβάνης</tspan></p><div
             class="a"
     /></div></div></div></foreignObject>
 </svg>
